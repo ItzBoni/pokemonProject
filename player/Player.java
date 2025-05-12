@@ -10,9 +10,11 @@ import java.util.List;
 public class Player {
     private String name;
     private List<Pokemon> pokemons = new ArrayList<>();
+    private int defeatedPokemons;
 
     public Player(String name) {
         this.name = name;
+        this.defeatedPokemons = 0;
     }
 
     public void addPokemon(Pokemon p) {
@@ -24,6 +26,15 @@ public class Player {
             Pokemon attacker = pokemons.get(0);
             Pokemon target = other.pokemons.get(0);
             attacker.attack(target);
+        }
+        checkPokemon();
+    }
+
+    public void checkPokemon() {
+        for (int i = 0; i < pokemons.size(); i++) {
+            if (!pokemons.get(i).getAlive()){
+                defeatedPokemons++;
+            }
         }
     }
 

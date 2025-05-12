@@ -5,11 +5,20 @@ public abstract class Pokemon implements Attackable, Evolvable {
     protected String name;
     protected int level;
     protected int health;
+    protected boolean alive;
 
     public Pokemon(String name, int level, int health) {
         this.name = name;
         this.level = level;
         this.health = health;
+    }
+
+    public boolean getAlive(){
+        return this.alive;
+    }
+
+    public void setAlive(boolean x){
+        this.alive = x;
     }
 
     public void usePotion(int amount) {
