@@ -1,16 +1,25 @@
 // pokemon/Pokemon.java
 package pokemon;
 
-public abstract class Pokemon implements Attackable, Evolvable {
+public class Pokemon implements Attackable, Evolvable {
     protected String name;
     protected int level;
     protected int health;
     protected boolean alive;
+    protected int evolution;
+    public static enum tipo {
+        AGUA, FUEGO, PLANTA
+    }
 
-    public Pokemon(String name, int level, int health) {
+
+
+    protected tipo Type1;
+
+    public Pokemon(String name, int level, int health, int evolution) {
         this.name = name;
         this.level = level;
         this.health = health;
+        this.evolution = evolution;
     }
 
     public boolean getAlive(){
@@ -46,4 +55,6 @@ public abstract class Pokemon implements Attackable, Evolvable {
     public String toString() {
         return name + " [Level " + level + ", HP: " + health + "]";
     }
+
+
 }

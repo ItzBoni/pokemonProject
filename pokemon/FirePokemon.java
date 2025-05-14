@@ -3,8 +3,8 @@ package pokemon;
 
 public class FirePokemon extends Pokemon {
 
-    public FirePokemon(String name, int level, int health) {
-        super(name, level, health);
+    public FirePokemon(String name, int level, int health, int evolution) {
+        super(name, level, health, evolution);
     }
 
     @Override
