@@ -1,4 +1,4 @@
-package pokemon;
+package src.main.java.com.pokemonGame.pokemon;
 
 public class Attack implements Attackable{
     private int attackStrength = 0;

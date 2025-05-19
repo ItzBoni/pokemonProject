@@ -1,5 +1,5 @@
 // pokemon/Pokemon.java
-package pokemon;
+package src.main.java.com.pokemonGame.pokemon;
 
 import java.util.Objects;
 

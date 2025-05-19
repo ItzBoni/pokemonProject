@@ -1,5 +1,5 @@
 // potion/Potion.java
-package potions;
+package src.main.java.com.pokemonGame.potions;
 
 public class Potion {
     private PotionType type;

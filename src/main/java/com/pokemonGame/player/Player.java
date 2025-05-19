@@ -1,8 +1,8 @@
 // player/Player.java
-package player;
+package src.main.java.com.pokemonGame.player;
 
-import pokemon.Pokemon;
-import potions.Potion;
+import  src.main.java.com.pokemonGame.pokemon.Pokemon;
+import  src.main.java.com.pokemonGame.potions.Potion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +36,14 @@ public class Player {
                 defeatedPokemons += 1;
             }
         }
+    }
+
+    public void setPokemonDefeated(int n){
+        this.defeatedPokemons = n;
+    }
+
+    public int getPokemonDefeated(){
+        return this.defeatedPokemons;
     }
 
     public String getName() {

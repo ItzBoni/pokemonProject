@@ -1,4 +1,4 @@
-package pokemon;
+package src.main.java.com.pokemonGame.pokemon;
 import java.util.HashMap;
 import java.util.Map;
 
