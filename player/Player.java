@@ -21,14 +21,14 @@ public class Player {
         pokemons.add(p);
     }
 
-    public void takeTurn(Player other) {
-        if (!pokemons.isEmpty()) {
-            Pokemon attacker = pokemons.get(0);
-            Pokemon target = other.pokemons.get(0);
-            attacker.attack(target);
-        }
-        checkPokemon();
-    }
+    // public void takeTurn(Player other) {
+    //     if (!pokemons.isEmpty()) {
+    //         Pokemon attacker = pokemons.get(0);
+    //         Pokemon target = other.pokemons.get(0);
+    //         attacker.attack(target);
+    //     }
+    //     checkPokemon();
+    // }
 
     public void checkPokemon() {
         for (int i = 0; i < pokemons.size(); i++) {

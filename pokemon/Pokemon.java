@@ -3,33 +3,33 @@ package pokemon;
 
 import java.util.Objects;
 
-public abstract class Pokemon implements Attackable, Evolvable {
+public abstract class Pokemon implements Evolvable {
     protected String name;
     protected int level;
     protected int health;
     protected boolean alive;
     protected int evolution;
-    private tipo tipoPrimario;
-    private tipo tipoSecundario; // Puede ser null si solo tiene un tipo
-    private int hpActual, hpMax;
-    private int ataque;
-    private int defensa;
-    private int ataqueEspecial;
-    private int defensaEspecial;
-    private int velocidad;
-    private Pokemon evolucionaA;
+    protected tipo tipoPrimario;
+    protected tipo tipoSecundario; // Puede ser normal si solo tiene un tipo
+    protected int hpActual, hpMax;
+    
+    protected int ataque;
+    protected int defensa;
+    protected int ataqueEspecial;
+    protected int defensaEspecial;
+    protected int velocidad;
 
-    //Falta agregar metodos get and set xdlol
+    public Attack[] listAttacks  = new Attack[4];
+    
+    protected Pokemon evolucionaA;
+
 
     public static enum tipo {
-        AGUA, FUEGO, PLANTA, ELECTRICO, TIERRA
+        AGUA, FUEGO, PLANTA, ELECTRICO, TIERRA, NORMAL
     }
-
 
     protected tipo Type1;
 
-
-    
     public Pokemon(String name, int level, int health, int evolution, int hpMax, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int velocidad, tipo tipoPrimario, tipo tipoSecundario) { //Constructor donde faltaria agregar algunas cosas
         this.name = name;
         this.level = level;
@@ -44,7 +44,8 @@ public abstract class Pokemon implements Attackable, Evolvable {
         this.tipoPrimario = Objects.requireNonNull(tipoPrimario, "El tipo primario no puede ser null.");
         this.tipoSecundario = tipoSecundario;
     }
-        public Pokemon(String name, int level, int health, int evolution, int hpMax, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int velocidad, tipo tipoPrimario) { //Constructor donde faltaria agregar algunas cosas
+    
+    public Pokemon(String name, int level, int health, int evolution, int hpMax, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int velocidad, tipo tipoPrimario) { //Constructor donde faltaria agregar algunas cosas
         this.name = name;
         this.level = level;
         this.health = health;
@@ -79,6 +80,27 @@ public abstract class Pokemon implements Attackable, Evolvable {
         return health;
     }
 
+    public void setHealth(int newHealth){
+        if (newHealth < 0){
+            this.health = 0;
+            this.setAlive(false);
+            return;
+        }
+
+        this.health = newHealth;
+    }
+
+    public int getSpeed(){
+        return this.velocidad;
+    }
+    
+    public tipo getPrimaryType() {
+        return this.tipoPrimario;
+    }
+    public tipo getSecondaryType() {
+        return this.tipoSecundario;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -92,17 +114,28 @@ public abstract class Pokemon implements Attackable, Evolvable {
         return name + " [Level " + level + ", HP: " + health + "]";
     }
      
-    public void recibirAtaque(double daño) {
+    public void recibirAtaque(double daño, Attack.attackType t) {
         int dañoRecibido = (int) Math.round(daño); // Convertimos el daño a entero
-        this.hpActual -= dañoRecibido;
-        if (this.hpActual < 0) {
-            this.hpActual = 0;
+        
+        if(t == Attack.attackType.ESPECIAL){
+            dañoRecibido -= this.defensaEspecial;
+        } else {
+            dañoRecibido -= this.defensa;
         }
+
+        if (dañoRecibido < 0) dañoRecibido = 1;
+
+        this.hpActual -= dañoRecibido;
+
+        if (this.hpActual < 0) this.hpActual = 0;
+
         System.out.println(name + " recibe " + dañoRecibido + " de daño. HP restante: " + this.hpActual + "/" + this.hpMax);
         if (this.hpActual == 0) {
             System.out.println(name + " se ha debilitado.");
+            this.setAlive(false);
         }
     }
+
      public void curar(int puntos) { //puntos vendria desde la clase pociones
         this.hpActual += puntos;
         if (this.hpActual > this.hpMax) {

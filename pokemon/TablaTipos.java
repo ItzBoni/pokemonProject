@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class TablaTipos{
 
-    private Map<Pokemon.tipo, Map<Pokemon.tipo, Double>> tablaTipos; // Declaración como variable de instancia
+    private static Map<Pokemon.tipo, Map<Pokemon.tipo, Double>> tablaTipos; // Declaración como variable de instancia
 
     TablaTipos(){// Mapa principal: tipo atacante → (tipo defensor → efectividad)
         tablaTipos = new HashMap<>();
@@ -65,7 +65,7 @@ public class TablaTipos{
             }
         }
     }
-    public double getMultiplicador(Pokemon.tipo tipoAtacante, Pokemon.tipo tipoDefensor) {
+    public static double getMultiplicador(Pokemon.tipo tipoAtacante, Pokemon.tipo tipoDefensor) {
         if (tablaTipos.containsKey(tipoAtacante)) {
             Map<Pokemon.tipo, Double> efectividades = tablaTipos.get(tipoAtacante);
             if (efectividades.containsKey(tipoDefensor)) {

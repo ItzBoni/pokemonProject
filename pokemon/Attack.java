@@ -2,58 +2,53 @@ package pokemon;
 
 public class Attack implements Attackable{
     private int attackStrength = 0;
+    private int attackAccurancy = 0;
     private String name;
     private Pokemon.tipo ATTACKTYPE;
-    private boolean check;
+    
+    public static enum attackType {
+        ESPECIAL,
+        PHYSICAL
+    };
 
-    public Attack(int x, String y, Pokemon.tipo TYPE){
+    private attackType aType;
+
+    public Attack(int x, String y, int acc, Pokemon.tipo TYPE, Attack.attackType t){
         this.attackStrength = x;
+        this.attackAccurancy = acc;
         this.name = y;
         this.ATTACKTYPE = TYPE;
+        this.aType = t;
     }
 
-    public void setAttack(String n){
+    public void setAttackName(String n){
         this.name = n;
     }
     
-    public String getAttack(){
+    public String getAttackName(){
         return this.name;
     }
 
-    protected boolean precision(int strength){
+    public int getAttackStrenght (){
+        return this.attackStrength;
+    }
+
+    protected boolean precision(){
         boolean xd = false;
         int randomNum = (int)(Math.random() * 101);
-        if(randomNum < (strength+5) && randomNum > (strength-5)){
-            System.out.println("Tu ataque fue preciso");
+        
+        if(randomNum <= this.attackAccurancy){
             xd = true;
-        } else {
-            System.out.println("El ataque no fue efectivo");
         }
+
         return xd;
     }
 
     @Override
-    public void attack(Pokemon t){
-        switch (ATTACKTYPE) {
-            case AGUA:
-                check = precision(attackStrength);
-                if (check) {
-                    
-                }
-                break;
-            case FUEGO:
-                check = precision(attackStrength);
-                break;
-            case PLANTA:
-                check = precision(attackStrength);
-                break;
-            default:
-                break;
+    public void attack(Pokemon p){
+        if (precision()){
+            double daño = this.attackStrength * TablaTipos.getMultiplicador(this.ATTACKTYPE, p.getPrimaryType()) * TablaTipos.getMultiplicador(this.ATTACKTYPE, p.getSecondaryType());
+            p.recibirAtaque(daño, this.aType);
         }
     }
-
-    //Creo distintos ataques dependiendo del tipo de pokemon
-    //Métodos get para regresar el tipo del ataque y el daño hecho
-    //Algún método para la presición del ataque, un random que regrese un boolean si acerta o no
-    //Que el de la presición funcione como un check en dnd
 }
