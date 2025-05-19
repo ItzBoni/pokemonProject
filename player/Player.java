@@ -10,7 +10,7 @@ import java.util.List;
 public class Player {
     private String name;
     private List<Pokemon> pokemons = new ArrayList<>();
-    private int defeatedPokemons;
+    private int defeatedPokemons = 0;
 
     public Player(String name) {
         this.name = name;
@@ -33,7 +33,7 @@ public class Player {
     public void checkPokemon() {
         for (int i = 0; i < pokemons.size(); i++) {
             if (!pokemons.get(i).getAlive()){
-                defeatedPokemons++;
+                defeatedPokemons += 1;
             }
         }
     }
