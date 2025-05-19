@@ -4,51 +4,74 @@ import java.util.Map;
 
 public class TablaTipos{
 
-     TablaTipos(){// Mapa principal: tipo atacante → (tipo defensor → efectividad)
-            Map<String, Map<String, Double>> tablaTipos = new HashMap<>();
+    private Map<Pokemon.tipo, Map<Pokemon.tipo, Double>> tablaTipos; // Declaración como variable de instancia
 
-            // --- Tipo Fuego ---
-            Map<String, Double> fuego = new HashMap<>();
-            fuego.put("Planta", 2.0);
-            fuego.put("Agua", 0.5);
-            fuego.put("Roca", 0.5);
-            fuego.put("Fuego", 0.5);
-            tablaTipos.put("Fuego", fuego);
+    TablaTipos(){// Mapa principal: tipo atacante → (tipo defensor → efectividad)
+        tablaTipos = new HashMap<>();
 
-            // --- Tipo Agua ---
-            Map<String, Double> agua = new HashMap<>();
-            agua.put("Fuego", 2.0);
-            agua.put("Planta", 0.5);
-            agua.put("Roca", 2.0);
-            agua.put("Agua", 0.5);
-            tablaTipos.put("Agua", agua);
+        // --- Tipo Fuego ---
+        Map<Pokemon.tipo, Double> fuego = new HashMap<>();
+        fuego.put(Pokemon.tipo.PLANTA, 2.0);
+        fuego.put(Pokemon.tipo.AGUA, 0.5);
+        fuego.put(Pokemon.tipo.ELECTRICO, 1.0);
+        fuego.put(Pokemon.tipo.TIERRA, 0.5);
+        fuego.put(Pokemon.tipo.FUEGO, 0.5);
+        tablaTipos.put(Pokemon.tipo.FUEGO, fuego);
 
-            // --- Tipo Planta ---
-            Map<String, Double> planta = new HashMap<>();
-            planta.put("Fuego", 0.5);
-            planta.put("Agua", 2.0);
-            planta.put("Roca", 2.0);
-            planta.put("Planta", 0.5);
-            tablaTipos.put("Planta", planta);
+        // --- Tipo Agua ---
+        Map<Pokemon.tipo, Double> agua = new HashMap<>();
+        agua.put(Pokemon.tipo.FUEGO, 2.0);
+        agua.put(Pokemon.tipo.PLANTA, 0.5);
+        agua.put(Pokemon.tipo.TIERRA, 2.0);
+        agua.put(Pokemon.tipo.ELECTRICO, 1.0);
+        agua.put(Pokemon.tipo.AGUA, 0.5);
+        tablaTipos.put(Pokemon.tipo.AGUA, agua);
 
-            // --- Tipo Roca ---
-            Map<String, Double> roca = new HashMap<>();
-            roca.put("Fuego", 2.0);
-            roca.put("Agua", 1.0);
-            roca.put("Planta", 1.0);
-            roca.put("Roca", 1.0);
-            tablaTipos.put("Roca", roca);
+        // --- Tipo Planta ---
+        Map<Pokemon.tipo, Double> planta = new HashMap<>();
+        planta.put(Pokemon.tipo.FUEGO, 0.5);
+        planta.put(Pokemon.tipo.AGUA, 2.0);
+        planta.put(Pokemon.tipo.TIERRA, 2.0);
+        planta.put(Pokemon.tipo.ELECTRICO, 1.5);
+        planta.put(Pokemon.tipo.PLANTA, 0.5);
+        tablaTipos.put(Pokemon.tipo.PLANTA, planta);
 
-            // Recorrer tabla con for-each
-            for (Map.Entry<String, Map<String, Double>> atacante : tablaTipos.entrySet()) {
-                String tipoAtacante = atacante.getKey();
-                Map<String, Double> defensores = atacante.getValue();
+        // --- Tipo Roca ---
+        Map<Pokemon.tipo, Double> tierra = new HashMap<>();
+        tierra.put(Pokemon.tipo.FUEGO, 2.0);
+        tierra.put(Pokemon.tipo.AGUA, 1.0);
+        tierra.put(Pokemon.tipo.ELECTRICO, 2.0);
+        tierra.put(Pokemon.tipo.PLANTA, 0.5);
+        tierra.put(Pokemon.tipo.TIERRA, 1.0);
+        tablaTipos.put(Pokemon.tipo.TIERRA, tierra);
 
-                for (Map.Entry<String, Double> defensor : defensores.entrySet()) {
-                    String tipoDefensor = defensor.getKey();
-                    double efectividad = defensor.getValue();
-                    System.out.println(tipoAtacante + " → " + tipoDefensor + " = " + efectividad + "x");
-                }
-            } 
+        Map<Pokemon.tipo, Double> electrico = new HashMap<>();
+        electrico.put(Pokemon.tipo.FUEGO, 1.0);
+        electrico.put(Pokemon.tipo.AGUA, 2.0);
+        electrico.put(Pokemon.tipo.TIERRA, 0.0);
+        electrico.put(Pokemon.tipo.PLANTA, 0.5);
+        electrico.put(Pokemon.tipo.ELECTRICO, 0.5);
+        tablaTipos.put(Pokemon.tipo.ELECTRICO, electrico);
+
+        // Recorrer tabla con for-each
+        for (Map.Entry<Pokemon.tipo, Map<Pokemon.tipo, Double>> atacante : tablaTipos.entrySet()) {
+            Pokemon.tipo tipoAtacante = atacante.getKey();
+            Map<Pokemon.tipo, Double> defensores = atacante.getValue();
+
+            for (Map.Entry<Pokemon.tipo, Double> defensor : defensores.entrySet()) {
+                Pokemon.tipo tipoDefensor = defensor.getKey();
+                double efectividad = defensor.getValue();
+                System.out.println(tipoAtacante + " → " + tipoDefensor + " = " + efectividad + "x");
+            }
         }
-    }    
+    }
+    public double getMultiplicador(Pokemon.tipo tipoAtacante, Pokemon.tipo tipoDefensor) {
+        if (tablaTipos.containsKey(tipoAtacante)) {
+            Map<Pokemon.tipo, Double> efectividades = tablaTipos.get(tipoAtacante);
+            if (efectividades.containsKey(tipoDefensor)) {
+                return efectividades.get(tipoDefensor);
+            }
+        }
+        return 1.0; // Valor por defecto si no se encuentra la combinación
+    }
+}
