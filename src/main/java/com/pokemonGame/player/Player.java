@@ -1,8 +1,8 @@
 // player/Player.java
-package src.main.java.com.pokemonGame.player;
+package com.pokemonGame.player;
 
-import  src.main.java.com.pokemonGame.pokemon.Pokemon;
-import  src.main.java.com.pokemonGame.potions.Potion;
+import  com.pokemonGame.pokemon.Pokemon;
+import  com.pokemonGame.potions.Potion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +61,7 @@ public class Player {
         public void usePotion(Pokemon p) {
             if (!potions.isEmpty()) {
                 Potion potion = potions.remove(0);
-                p.usePotion(potion.getEffectValue());
+                potion.getEffectValue(p);
             }
         }
     }

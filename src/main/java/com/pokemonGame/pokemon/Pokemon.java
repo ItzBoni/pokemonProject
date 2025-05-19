@@ -1,5 +1,5 @@
 // pokemon/Pokemon.java
-package src.main.java.com.pokemonGame.pokemon;
+package com.pokemonGame.pokemon;
 
 import java.util.Objects;
 
@@ -65,6 +65,30 @@ public abstract class Pokemon implements Evolvable {
 
     public void setAlive(boolean x){
         this.alive = x;
+    }
+
+    public void setAtaque(int atk){
+        ataque = atk;
+    }
+
+    public int getAtaque(){
+        return ataque;
+    }
+
+    public void setDefense(int def){
+        defensa = def;
+    }
+
+    public int getDefense(){
+        return defensa;
+    }
+
+    public void setVelocidad(int i){
+        velocidad = i;
+    }
+
+    public int getVelocidad(){
+        return velocidad;
     }
 
     public void usePotion(int amount) {

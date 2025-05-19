@@ -1,7 +1,7 @@
-package src.main.java.com.pokemonGame.pokemon.pokedex;
+package com.pokemonGame.pokemon.pokedex;
 
-import  src.main.java.com.pokemonGame.pokemon.Attack;
-import  src.main.java.com.pokemonGame.pokemon.Pokemon;
+import  com.pokemonGame.pokemon.Attack;
+import  com.pokemonGame.pokemon.Pokemon;
 
 public class Pikachu extends Pokemon {
     public Pikachu(){

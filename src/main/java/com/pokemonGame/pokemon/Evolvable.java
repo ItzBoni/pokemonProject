@@ -1,4 +1,4 @@
-package src.main.java.com.pokemonGame.pokemon;
+package com.pokemonGame.pokemon;
 
 
 
