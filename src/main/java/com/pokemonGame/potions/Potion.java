@@ -27,16 +27,16 @@ public class Potion {
     public void getEffectValue(Pokemon poke) {
         switch (this.type) {
             case "STRENGTH":
-                poke.setAtaque(effectValue);
+                poke.setAtaque(poke.getAtaque()+effectValue);
                 break;
             case "HEALING":
                 poke.curar(effectValue);
                 break;
             case "DEFENSE":
-                poke.setDefense(effectValue);
+                poke.setDefense(poke.getDefense()+ effectValue);
                 break;
             case "SPEED":
-                poke.setVelocidad(effectValue);
+                poke.setVelocidad(poke.getVelocidad()+effectValue);
                 break;
             default:
                 break;

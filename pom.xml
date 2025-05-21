@@ -19,7 +19,6 @@
 
     <dependencies>
     
-
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx</artifactId>

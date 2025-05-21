@@ -65,6 +65,7 @@ public class TablaTipos{
             }
         }
     }
+    
     public static double getMultiplicador(Pokemon.tipo tipoAtacante, Pokemon.tipo tipoDefensor) {
         if (tablaTipos.containsKey(tipoAtacante)) {
             Map<Pokemon.tipo, Double> efectividades = tablaTipos.get(tipoAtacante);
