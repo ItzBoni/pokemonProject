@@ -30,6 +30,12 @@ public class Player {
     //     checkPokemon();
     // }
 
+    public void revivePoke(){
+        for(Pokemon p: pokemons){
+            p.setHealth(p.getHpMax());
+        }
+    }
+
     public void checkPokemon() {
         for (int i = 0; i < pokemons.size(); i++) {
             if (!pokemons.get(i).getAlive()){

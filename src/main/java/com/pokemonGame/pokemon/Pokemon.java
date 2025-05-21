@@ -58,6 +58,9 @@ public abstract class Pokemon implements Evolvable {
         this.velocidad = velocidad;
         this.tipoPrimario = tipoPrimario;
     }
+    public int getHpMax(){
+        return hpMax;
+    }
 
     public boolean getAlive(){
         return this.alive;
