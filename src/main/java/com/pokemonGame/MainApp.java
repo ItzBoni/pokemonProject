@@ -12,11 +12,12 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("@GUI/MainView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/MainView.fxml"));
         Parent root = loader.load();
 
-        Scene scene = new Scene(root, 600, 400); // Tamaño de la ventana
-        primaryStage.setTitle("App con Vistas Discretas");
+        Scene scene = new Scene(root, 1200, 800); // Tamaño de la ventana
+        scene.getStylesheets().add(getClass().getResource("/Stylesheets/InitialView.css").toExternalForm());
+        primaryStage.setTitle("Pokemon Game by ADS");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

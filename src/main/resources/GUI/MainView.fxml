@@ -7,14 +7,15 @@
 
 <VBox alignment="TOP_CENTER" spacing="10.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.pokemonGame.GUI.Controllers.MainController">
+      fx:controller="com.pokemonGame.Controllers.MainController">
 
    <children>
       <StackPane fx:id="contentArea" VBox.vgrow="ALWAYS">
             <!-- En el id tienen que poner el identificador y en el source la vista a la que pertenece. -->
-         <!--<fx:include fx:id="-" source="*.fxml" />
-         <fx:include fx:id="-" source="*.fxml" />-->
+         <fx:include fx:id="StartPage" source="Views/InitView.fxml" />
+         <!-- <fx:include fx:id="-" source="*.fxml" /> -->
 
       </StackPane>
    </children>
+   
 </VBox>

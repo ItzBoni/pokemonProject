@@ -10,6 +10,7 @@ public class Potion {
     public Potion(String type, int effectValue) {
         this.type = type;
         this.effectValue = effectValue;
+        this.quant = 5;
     }
 
     public void refill(){
@@ -20,8 +21,8 @@ public class Potion {
         return type;
     }
 
-    public String remainingUse(){
-        return "You have "+quant+" uses left";
+    public int remainingUse(){
+        return quant;
     }
 
     public void getEffectValue(Pokemon poke) {
@@ -41,6 +42,8 @@ public class Potion {
             default:
                 break;
         }
+
+        quant--;
     }
 
     @Override
