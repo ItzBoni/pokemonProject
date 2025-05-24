@@ -1,0 +1,549 @@
+Apache Maven Daemon (mvnd) 1.0.2 windows-amd64 native client (cccc1ec8a5b741c62b29f9fb04d37b1678a029bb)
+Terminal: org.jline.terminal.impl.jni.win.NativeWinSysTerminal
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: C:\Program Files\maven-mvnd-1.0.2-windows-amd64\mvn
+Java version: 21.0.6, vendor: Eclipse Adoptium, runtime: C:\Users\donov\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot
+Default locale: es_MX, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+[DEBUG] Reading global settings from C:\Program Files\maven-mvnd-1.0.2-windows-amd64\mvn\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\donov\.m2\settings.xml
+[DEBUG] Reading global toolchains from C:\Program Files\maven-mvnd-1.0.2-windows-amd64\mvn\conf\toolchains.xml
+[DEBUG] Reading user toolchains from C:\Users\donov\.m2\toolchains.xml
+[INFO] Error stacktraces are turned on.
+[DEBUG] Message scheme: plain
+[INFO] Processing build on daemon ca176ff7
+[DEBUG] Using local repository at C:\Users\donov\.m2\repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for C:\Users\donov\.m2\repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project com.pokemonGame:Pokemon-Game:jar:_v1.0: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[INFO] BuildTimeEventSpy is registered.
+[DEBUG] Resolving plugin prefix javafx from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix javafx to org.openjfx:javafx-maven-plugin from POM com.pokemonGame:Pokemon-Game:jar:_v1.0
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.pokemonGame:Pokemon-Game:jar:_v1.0
+[DEBUG] Tasks:   [javafx:run]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] Using the SmartBuilder implementation with a thread count of 15
+[DEBUG] Task segments : [[javafx:run]]
+[DEBUG] Build maximum degree of concurrency is 15
+[DEBUG] Total number of projects is 1
+[DEBUG] Ready com.pokemonGame:Pokemon-Game
+[DEBUG] STARTED build of project com.pokemonGame:Pokemon-Game
+[INFO] 
+[INFO] --------------------< com.pokemonGame:Pokemon-Game >--------------------
+[INFO] Building Game about pokemon _v1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[DEBUG] Resolving plugin prefix javafx from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix javafx to org.openjfx:javafx-maven-plugin from POM com.pokemonGame:Pokemon-Game:jar:_v1.0
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.pokemonGame:Pokemon-Game:_v1.0
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [runtime]
+[DEBUG] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] --- init fork of com.pokemonGame:Pokemon-Game:_v1.0 for org.openjfx:javafx-maven-plugin:0.0.8:run (default-cli) ---
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.resources.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <annotationProcessorPathsUseDepMgmt default-value="false"/>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compilePath default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <createMissingPackageInfoClass default-value="true">${maven.compiler.createMissingPackageInfoClass}</createMissingPackageInfoClass>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debugFileName default-value="javac"/>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <enablePreview default-value="false">${maven.compiler.enablePreview}</enablePreview>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <fileExtensions default-value="class,jar"/>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <forceLegacyJavacApi default-value="false">${maven.compiler.forceLegacyJavacApi}</forceLegacyJavacApi>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <implicit>${maven.compiler.implicit}</implicit>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}">${maven.compiler.outputDirectory}</outputDirectory>
+  <outputTimestamp default-value="${project.build.outputTimestamp}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <proc>${maven.compiler.proc}</proc>
+  <project default-value="${project}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <release>${maven.compiler.release}</release>
+  <session default-value="${session}"/>
+  <showCompilationChanges default-value="false">${maven.compiler.showCompilationChanges}</showCompilationChanges>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="true">${maven.compiler.showWarnings}</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.8">${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.8">${maven.compiler.target}</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] --- exit fork of com.pokemonGame:Pokemon-Game:_v1.0 for org.openjfx:javafx-maven-plugin:0.0.8:run (default-cli) ---
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.openjfx:javafx-maven-plugin:0.0.8:run (default-cli)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <async default-value="false">${javafx.async}</async>
+  <asyncDestroyOnShutdown default-value="true">${javafx.asyncDestroyOnShutdown}</asyncDestroyOnShutdown>
+  <basedir default-value="${basedir}"/>
+  <builddir default-value="${project.build.directory}"/>
+  <commandlineArgs>${javafx.args}</commandlineArgs>
+  <compilePath default-value="${project.compileClasspathElements}"/>
+  <executable default-value="java">${javafx.executable}</executable>
+  <includePathExceptionsInClasspath default-value="false">${javafx.includePathExceptionsInClasspath}</includePathExceptionsInClasspath>
+  <mainClass>com.pokemonGame.MainApp</mainClass>
+  <outputFile>${javafx.outputFile}</outputFile>
+  <project default-value="${project}"/>
+  <runtimePathOption>${javafx.runtimePathOption}</runtimePathOption>
+  <session default-value="${session}"/>
+  <skip default-value="false">${javafx.skip}</skip>
+  <workingDirectory>${javafx.workingDirectory}</workingDirectory>
+</configuration>
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] >>> javafx:0.0.8:run (default-cli) > process-classes @ Pokemon-Game >>>
+[DEBUG] Creating adapter using nameMapper 'file-gav' and factory 'file-lock'
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=29700, ConflictMarker.markTime=16800, ConflictMarker.nodeCount=18, ConflictIdSorter.graphTime=32000, ConflictIdSorter.topsortTime=47300, ConflictIdSorter.conflictIdCount=8, ConflictIdSorter.conflictIdCycleCount=4, ConflictResolver.totalTime=195200, ConflictResolver.conflictItemCount=11, DfDependencyCollector.collectTime=27184500, DfDependencyCollector.transformTime=368900}
+[DEBUG] com.pokemonGame:Pokemon-Game:jar:_v1.0
+[DEBUG]    org.openjfx:javafx-controls:jar:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-controls:jar:win:21.0.2:compile
+[DEBUG]    org.openjfx:javafx-fxml:jar:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-fxml:jar:win:21.0.2:compile
+[DEBUG]    org.openjfx:javafx-graphics:jar:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-graphics:jar:win:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-base:jar:21.0.2:compile
+[DEBUG]          org.openjfx:javafx-base:jar:win:21.0.2:compile
+[DEBUG] Already 573 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2
+[DEBUG] Already 574 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2
+[DEBUG] Already 573 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2
+[DEBUG] Already 574 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2
+[DEBUG] Already 573 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2
+[DEBUG] Already 574 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2
+[DEBUG] Already 573 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2
+[DEBUG] Already 574 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Pokemon-Game ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1-2010178502, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@5a07e868]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources:default-resources' with basic configurator -->
+[DEBUG]   (f) addDefaultExcludes = true
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (f) fileNameFiltering = false
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.pokemonGame:Pokemon-Game:_v1.0 @ C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources, PatternSet [includes: {**/*.fxml, **/*.properties, **/*.png, **/*.css}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@605041a9
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used:
+[DEBUG] classworlds.conf: C:\Program Files\maven-mvnd-1.0.2-windows-amd64\bin\mvnd-daemon.conf
+[DEBUG] env.=::: ::\
+[DEBUG] env.ACLOCAL_PATH: C:\Program Files\Git\mingw64\share\aclocal;C:\Program Files\Git\usr\share\aclocal
+[DEBUG] env.ACSetupSvcPort: 23210
+[DEBUG] env.ACSvcPort: 17532
+[DEBUG] env.ALLUSERSPROFILE: C:\ProgramData
+[DEBUG] env.APPDATA: C:\Users\donov\AppData\Roaming
+[DEBUG] env.COMMONPROGRAMFILES: C:\Program Files\Common Files
+[DEBUG] env.COMPILE_NVCC: nvcc --compiler-bindir="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\bin\Hostx64\x64" --std=c++17 -arch=sm_86
+[DEBUG] env.COMPUTERNAME: ASUS_DEAD
+[DEBUG] env.COMSPEC: C:\WINDOWS\system32\cmd.exe
+[DEBUG] env.CONFIG_SITE: C:/Program Files/Git/etc/config.site
+[DEBUG] env.CUDA_PATH: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8
+[DEBUG] env.CUDA_PATH_V12_6: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6
+[DEBUG] env.CUDA_PATH_V12_8: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8
+[DEBUG] env.ChocolateyInstall: C:\ProgramData\chocolatey
+[DEBUG] env.ChocolateyLastPathUpdate: 133758938466496920
+[DEBUG] env.CommonProgramFiles(x86): C:\Program Files (x86)\Common Files
+[DEBUG] env.CommonProgramW6432: C:\Program Files\Common Files
+[DEBUG] env.DISPLAY: needs-to-be-defined
+[DEBUG] env.DriverData: C:\Windows\System32\Drivers\DriverData
+[DEBUG] env.EFC_1780_1262719628: 1
+[DEBUG] env.EFC_1780_1592913036: 1
+[DEBUG] env.EFC_1780_2283032206: 1
+[DEBUG] env.EFC_1780_2775293581: 1
+[DEBUG] env.EFC_1780_3789132940: 1
+[DEBUG] env.EXEPATH: C:\Program Files\Git
+[DEBUG] env.FPS_BROWSER_APP_PROFILE_STRING: Internet Explorer
+[DEBUG] env.FPS_BROWSER_USER_PROFILE_STRING: Default
+[DEBUG] env.GOPATH: C:\Users\donov\go
+[DEBUG] env.HOME: C:\Users\donov
+[DEBUG] env.HOMEDRIVE: C:
+[DEBUG] env.HOMEPATH: \Users\donov
+[DEBUG] env.HOSTNAME: ASUS_DEAD
+[DEBUG] env.IGCCSVC_DB: AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATMBk6yGTEkWsahTQSeXqvQQAAAACAAAAAAAQZgAAAAEAACAAAAA7ukHhTq2lDrnTnDDN6bU+d+8p9xCJb+3W28qAbMBJKQAAAAAOgAAAAAIAACAAAAB9VLtHaWm2bJBo28ctTmyVSZaEOna7UCddc4uOQOo36GAAAABaCrvvZzHKAeimyBjvSqKObUK3XqxrkI32aw5I+bh11WzX/4j4wdN3ZmALPya58VIEQgyJpkRIFAN6cGPlpCSD8CLQViCYgaqVa/Kb+KFZHJL1xdYKvvB3lEcvNCHlfaJAAAAAQIOxsgk7RrsO4InXflVcBB/kcXoAQXmjPGS7BCTQ9mVzQnIz32fbUWfbudA9H5Dx07T+/qZ+sWz89FpY2qIY0g==
+[DEBUG] env.INFOPATH: C:\Program Files\Git\mingw64\local\info;C:\Program Files\Git\mingw64\share\info;C:\Program Files\Git\usr\local\info;C:\Program Files\Git\usr\share\info;C:\Program Files\Git\usr\info;C:\Program Files\Git\share\info
+[DEBUG] env.LC_CTYPE: es_ES.UTF-8
+[DEBUG] env.LOCALAPPDATA: C:\Users\donov\AppData\Local
+[DEBUG] env.LOGONSERVER: \\ASUS_DEAD
+[DEBUG] env.MANPATH: C:\Program Files\Git\mingw64\local\man;C:\Program Files\Git\mingw64\share\man;C:\Program Files\Git\usr\local\man;C:\Program Files\Git\usr\share\man;C:\Program Files\Git\usr\man;C:\Program Files\Git\share\man
+[DEBUG] env.MINGW_CHOST: x86_64-w64-mingw32
+[DEBUG] env.MINGW_PACKAGE_PREFIX: mingw-w64-x86_64
+[DEBUG] env.MINGW_PREFIX: C:/Program Files/Git/mingw64
+[DEBUG] env.MSYSTEM: MINGW64
+[DEBUG] env.MSYSTEM_CARCH: x86_64
+[DEBUG] env.MSYSTEM_CHOST: x86_64-w64-mingw32
+[DEBUG] env.MSYSTEM_PREFIX: C:/Program Files/Git/mingw64
+[DEBUG] env.MVND_HOME: C:\Program Files\maven-mvnd-1.0.2-windows-amd64
+[DEBUG] env.NUMBER_OF_PROCESSORS: 16
+[DEBUG] env.OLDPWD: C:/Users/donov/OneDrive/Escritorio/Escuela/Semester_2/POO/pokemonProject/target
+[DEBUG] env.ORIGINAL_PATH: C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\donov\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;C:\Python312\Scripts;C:\Python312;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\mingw64\mingw64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\bin\Hostx86\x86;C:\Program Files\NVIDIA Corporation\Nsight Compute 2025.1.1;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Users\donov\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin;C:\Users\donov\AppData\Local\Programs\Python\Python313\Scripts;C:\Users\donov\AppData\Local\Programs\Python\Python313;C:\Users\donov\AppData\Local\Microsoft\WindowsApps;C:\Users\donov\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\donov\AppData\Roaming\npm;C:\Users\donov\go\bin;C:\Program Files\maven-mvnd-1.0.2-windows-amd64\bin
+[DEBUG] env.ORIGINAL_TEMP: C:/Users/donov/AppData/Local/Temp
+[DEBUG] env.ORIGINAL_TMP: C:/Users/donov/AppData/Local/Temp
+[DEBUG] env.OS: Windows_NT
+[DEBUG] env.OneDrive: C:\Users\donov\OneDrive
+[DEBUG] env.OneDriveConsumer: C:\Users\donov\OneDrive
+[DEBUG] env.PATH: C:\Users\donov\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\donov\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;C:\Python312\Scripts;C:\Python312;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\mingw64\mingw64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\bin\Hostx86\x86;C:\Program Files\NVIDIA Corporation\Nsight Compute 2025.1.1;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Users\donov\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin;C:\Users\donov\AppData\Local\Programs\Python\Python313\Scripts;C:\Users\donov\AppData\Local\Programs\Python\Python313;C:\Users\donov\AppData\Local\Microsoft\WindowsApps;C:\Users\donov\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\donov\AppData\Roaming\npm;C:\Users\donov\go\bin;C:\Program Files\maven-mvnd-1.0.2-windows-amd64\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+[DEBUG] env.PATHEXT: .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+[DEBUG] env.PKG_CONFIG_PATH: C:\Program Files\Git\mingw64\lib\pkgconfig;C:\Program Files\Git\mingw64\share\pkgconfig
+[DEBUG] env.PKG_CONFIG_SYSTEM_INCLUDE_PATH: C:/Program Files/Git/mingw64/include
+[DEBUG] env.PKG_CONFIG_SYSTEM_LIBRARY_PATH: C:/Program Files/Git/mingw64/lib
+[DEBUG] env.PLINK_PROTOCOL: ssh
+[DEBUG] env.PROCESSOR_ARCHITECTURE: AMD64
+[DEBUG] env.PROCESSOR_IDENTIFIER: Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+[DEBUG] env.PROCESSOR_LEVEL: 6
+[DEBUG] env.PROCESSOR_REVISION: 9a03
+[DEBUG] env.PROGRAMFILES: C:\Program Files
+[DEBUG] env.PS1: \[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ 
+[DEBUG] env.PSModulePath: C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+[DEBUG] env.PUBLIC: C:\Users\Public
+[DEBUG] env.PWD: C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject
+[DEBUG] env.ProgramData: C:\ProgramData
+[DEBUG] env.ProgramFiles(x86): C:\Program Files (x86)
+[DEBUG] env.ProgramW6432: C:\Program Files
+[DEBUG] env.RlsSvcPort: 22112
+[DEBUG] env.SESSIONNAME: Console
+[DEBUG] env.SHELL: C:\Program Files\Git\usr\bin\bash.exe
+[DEBUG] env.SHLVL: 1
+[DEBUG] env.SSH_ASKPASS: C:/Program Files/Git/mingw64/bin/git-askpass.exe
+[DEBUG] env.SYSTEMDRIVE: C:
+[DEBUG] env.SYSTEMROOT: C:\WINDOWS
+[DEBUG] env.TEMP: C:\Users\donov\AppData\Local\Temp
+[DEBUG] env.TERM: xterm
+[DEBUG] env.TERM_PROGRAM: mintty
+[DEBUG] env.TERM_PROGRAM_VERSION: 3.7.6
+[DEBUG] env.TMP: C:\Users\donov\AppData\Local\Temp
+[DEBUG] env.TMPDIR: C:\Users\donov\AppData\Local\Temp
+[DEBUG] env.USERDOMAIN: ASUS_DEAD
+[DEBUG] env.USERDOMAIN_ROAMINGPROFILE: ASUS_DEAD
+[DEBUG] env.USERNAME: donov
+[DEBUG] env.USERPROFILE: C:\Users\donov
+[DEBUG] env.WINDIR: C:\WINDOWS
+[DEBUG] env.ZES_ENABLE_SYSMAN: 1
+[DEBUG] env._: C:/Program Files/maven-mvnd-1.0.2-windows-amd64/bin/mvnd
+[DEBUG] file.encoding: UTF-8
+[DEBUG] file.separator: \
+[DEBUG] guice.disable.misplaced.annotation.check: true
+[DEBUG] java.class.path: C:\Program Files\maven-mvnd-1.0.2-windows-amd64\mvn\boot\plexus-classworlds-2.8.0.jar
+[DEBUG] java.class.version: 65.0
+[DEBUG] java.home: C:\Users\donov\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot
+[DEBUG] java.io.tmpdir: C:\Users\donov\AppData\Local\Temp\
+[DEBUG] java.library.path: C:\Users\donov\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\donov\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\donov\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;C:\Python312\Scripts;C:\Python312;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\mingw64\mingw64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\bin\Hostx86\x86;C:\Program Files\NVIDIA Corporation\Nsight Compute 2025.1.1;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Users\donov\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin;C:\Users\donov\AppData\Local\Programs\Python\Python313\Scripts;C:\Users\donov\AppData\Local\Programs\Python\Python313;C:\Users\donov\AppData\Local\Microsoft\WindowsApps;C:\Users\donov\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\donov\AppData\Roaming\npm;C:\Users\donov\go\bin;C:\Program Files\maven-mvnd-1.0.2-windows-amd64\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;.
+[DEBUG] java.runtime.name: OpenJDK Runtime Environment
+[DEBUG] java.runtime.version: 21.0.6+7-LTS
+[DEBUG] java.specification.name: Java Platform API Specification
+[DEBUG] java.specification.vendor: Oracle Corporation
+[DEBUG] java.specification.version: 21
+[DEBUG] java.util.logging.config.file: C:\Program Files\maven-mvnd-1.0.2-windows-amd64\mvn\conf/logging/java.util.logging.properties
+[DEBUG] java.vendor: Eclipse Adoptium
+[DEBUG] java.vendor.url: https://adoptium.net/
+[DEBUG] java.vendor.url.bug: https://github.com/adoptium/adoptium-support/issues
+[DEBUG] java.vendor.version: Temurin-21.0.6+7
+[DEBUG] java.version: 21.0.6
+[DEBUG] java.version.date: 2025-01-21
+[DEBUG] java.vm.compressedOopsMode: 32-bit
+[DEBUG] java.vm.info: mixed mode, sharing
+[DEBUG] java.vm.name: OpenJDK 64-Bit Server VM
+[DEBUG] java.vm.specification.name: Java Virtual Machine Specification
+[DEBUG] java.vm.specification.vendor: Oracle Corporation
+[DEBUG] java.vm.specification.version: 21
+[DEBUG] java.vm.vendor: Eclipse Adoptium
+[DEBUG] java.vm.version: 21.0.6+7-LTS
+[DEBUG] jdk.debug: release
+[DEBUG] jdk.java.options: --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/sun.net.www.protocol.jar=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED
+[DEBUG] line.separator: 
+[DEBUG] maven.build.timestamp: 2025-05-24T01:49:08Z
+[DEBUG] maven.build.version: Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+[DEBUG] maven.compiler.release: 21
+[DEBUG] maven.compiler.source: 21
+[DEBUG] maven.compiler.target: 21
+[DEBUG] maven.conf: C:\Program Files\maven-mvnd-1.0.2-windows-amd64\mvn\conf
+[DEBUG] maven.home: C:\Program Files\maven-mvnd-1.0.2-windows-amd64\mvn
+[DEBUG] maven.multiModuleProjectDirectory: C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject
+[DEBUG] maven.version: 3.9.9
+[DEBUG] mvnd.coreExtensions: 
+[DEBUG] mvnd.daemonStorage: C:\Users\donov\.m2\mvnd\registry\1.0.2
+[DEBUG] mvnd.debug: false
+[DEBUG] mvnd.debug.address: 8000
+[DEBUG] mvnd.duplicateDaemonGracePeriod: 10s
+[DEBUG] mvnd.enableAssertions: false
+[DEBUG] mvnd.expirationCheckDelay: 10s
+[DEBUG] mvnd.extClasspath: 
+[DEBUG] mvnd.home: C:\Program Files\maven-mvnd-1.0.2-windows-amd64
+[DEBUG] mvnd.id: ca176ff7
+[DEBUG] mvnd.idleTimeout: 3h
+[DEBUG] mvnd.java.home: C:\Users\donov\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot
+[DEBUG] mvnd.keepAlive: 100ms
+[DEBUG] mvnd.noDaemon: false
+[DEBUG] mvnd.registry: C:\Users\donov\.m2\mvnd\registry\1.0.2\registry.bin
+[DEBUG] mvnd.socketFamily: inet
+[DEBUG] mvnd.terminalWidth: 94
+[DEBUG] native.encoding: Cp1252
+[DEBUG] org.slf4j.simpleLogger.logFile: C:\Users\donov\.m2\mvnd\registry\1.0.2\daemon-ca176ff7.log
+[DEBUG] os.arch: amd64
+[DEBUG] os.name: Windows 11
+[DEBUG] os.version: 10.0
+[DEBUG] path.separator: ;
+[DEBUG] project.baseUri: file:/C:/Users/donov/OneDrive/Escritorio/Escuela/Semester_2/POO/pokemonProject/
+[DEBUG] stderr.encoding: Cp1252
+[DEBUG] stdout.encoding: Cp1252
+[DEBUG] style.color: never
+[DEBUG] sun.arch.data.model: 64
+[DEBUG] sun.boot.library.path: C:\Users\donov\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin
+[DEBUG] sun.cpu.endian: little
+[DEBUG] sun.cpu.isalist: amd64
+[DEBUG] sun.io.unicode.encoding: UnicodeLittle
+[DEBUG] sun.java.command: org.codehaus.plexus.classworlds.launcher.Launcher
+[DEBUG] sun.java.launcher: SUN_STANDARD
+[DEBUG] sun.jnu.encoding: Cp1252
+[DEBUG] sun.management.compiler: HotSpot 64-Bit Tiered Compilers
+[DEBUG] sun.os.patch.level: 
+[DEBUG] user.country: MX
+[DEBUG] user.dir: C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject
+[DEBUG] user.home: C:\Users\donov
+[DEBUG] user.language: es
+[DEBUG] user.name: donov
+[DEBUG] user.script: 
+[DEBUG] user.timezone: America/Mexico_City
+[DEBUG] user.variant: 
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[DEBUG] Using 'null' encoding to copy filtered properties files.
+[DEBUG] resource with targetPath null
+directory C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources
+excludes []
+includes [**/*.fxml, **/*.properties, **/*.png, **/*.css]
+[DEBUG] ignoreDelta true
+[INFO] Copying 10 resources from src\main\resources to target\classes
+[DEBUG] Copying file GUI\MainView.fxml
+[DEBUG] file MainView.fxml has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'MainView.fxml'.
+[DEBUG] copy C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources\GUI\MainView.fxml to C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes\GUI\MainView.fxml
+[DEBUG] Copying file GUI\Views\InitView.fxml
+[DEBUG] file InitView.fxml has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'InitView.fxml'.
+[DEBUG] copy C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources\GUI\Views\InitView.fxml to C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes\GUI\Views\InitView.fxml
+[DEBUG] Copying file GUI\Views\PlayersRegister.fxml
+[DEBUG] file PlayersRegister.fxml has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'PlayersRegister.fxml'.
+[DEBUG] copy C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources\GUI\Views\PlayersRegister.fxml to C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes\GUI\Views\PlayersRegister.fxml
+[DEBUG] Copying file Pokemons\Bulbasaur.png
+[DEBUG] file Bulbasaur.png has a non filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'Bulbasaur.png'.
+[DEBUG] copy C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources\Pokemons\Bulbasaur.png to C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes\Pokemons\Bulbasaur.png
+[DEBUG] Copying file Pokemons\Charmander.png
+[DEBUG] file Charmander.png has a non filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'Charmander.png'.
+[DEBUG] copy C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources\Pokemons\Charmander.png to C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes\Pokemons\Charmander.png
+[DEBUG] Copying file Pokemons\Digglet.png
+[DEBUG] file Digglet.png has a non filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'Digglet.png'.
+[DEBUG] copy C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources\Pokemons\Digglet.png to C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes\Pokemons\Digglet.png
+[DEBUG] Copying file Pokemons\Pikachu.png
+[DEBUG] file Pikachu.png has a non filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'Pikachu.png'.
+[DEBUG] copy C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources\Pokemons\Pikachu.png to C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes\Pokemons\Pikachu.png
+[DEBUG] Copying file Pokemons\Squirtle.png
+[DEBUG] file Squirtle.png has a non filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'Squirtle.png'.
+[DEBUG] copy C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources\Pokemons\Squirtle.png to C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes\Pokemons\Squirtle.png
+[DEBUG] Copying file Stylesheets\InitialView.css
+[DEBUG] file InitialView.css has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'InitialView.css'.
+[DEBUG] copy C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources\Stylesheets\InitialView.css to C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes\Stylesheets\InitialView.css
+[DEBUG] Copying file Stylesheets\PlayerRegister.css
+[DEBUG] file PlayerRegister.css has a filtered file extension
+[DEBUG] Using 'null' encoding to copy filtered resource 'PlayerRegister.css'.
+[DEBUG] copy C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\resources\Stylesheets\PlayerRegister.css to C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes\Stylesheets\PlayerRegister.css
+[DEBUG] no user filter components
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ Pokemon-Game ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.13.0-411167441, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@5a07e868]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile:default-compile' with basic configurator -->
+[DEBUG]   (f) annotationProcessorPathsUseDepMgmt = false
+[DEBUG]   (f) basedir = C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject
+[DEBUG]   (f) buildDirectory = C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target
+[DEBUG]   (f) compilePath = [C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes, C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2-win.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2-win.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2-win.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2-win.jar]
+[DEBUG]   (f) compileSourceRoots = [C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) createMissingPackageInfoClass = true
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) debugFileName = javac
+[DEBUG]   (f) enablePreview = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) fileExtensions = [jar, class]
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) forceLegacyJavacApi = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\generated-sources\annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile {execution: default-compile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes
+[DEBUG]   (f) parameters = false
+[DEBUG]   (f) project = MavenProject: com.pokemonGame:Pokemon-Game:_v1.0 @ C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\pom.xml
+[DEBUG]   (f) projectArtifact = com.pokemonGame:Pokemon-Game:jar:_v1.0
+[DEBUG]   (s) release = 21
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@605041a9
+[DEBUG]   (f) showCompilationChanges = false
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = true
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 21
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (s) target = 21
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Adding C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\generated-sources\annotations to compile source roots:
+  C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\java
+[DEBUG] New compile source roots:
+  C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\src\main\java
+  C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\generated-sources\annotations
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< javafx:0.0.8:run (default-cli) < process-classes @ Pokemon-Game <<<
+[INFO] 
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=21200, ConflictMarker.markTime=7800, ConflictMarker.nodeCount=18, ConflictIdSorter.graphTime=20000, ConflictIdSorter.topsortTime=24000, ConflictIdSorter.conflictIdCount=8, ConflictIdSorter.conflictIdCycleCount=4, ConflictResolver.totalTime=241000, ConflictResolver.conflictItemCount=11, DfDependencyCollector.collectTime=159500, DfDependencyCollector.transformTime=326100}
+[DEBUG] com.pokemonGame:Pokemon-Game:jar:_v1.0
+[DEBUG]    org.openjfx:javafx-controls:jar:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-controls:jar:win:21.0.2:compile
+[DEBUG]    org.openjfx:javafx-fxml:jar:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-fxml:jar:win:21.0.2:compile
+[DEBUG]    org.openjfx:javafx-graphics:jar:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-graphics:jar:win:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-base:jar:21.0.2:compile
+[DEBUG]          org.openjfx:javafx-base:jar:win:21.0.2:compile
+[DEBUG] Already 575 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2
+[DEBUG] Already 576 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2
+[DEBUG] Already 575 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2
+[DEBUG] Already 576 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2
+[DEBUG] Already 575 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2
+[DEBUG] Already 576 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2
+[DEBUG] Already 575 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2
+[DEBUG] Already 576 watchers for path C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2
+[INFO] 
+[INFO] --- javafx:0.0.8:run (default-cli) @ Pokemon-Game ---
+[DEBUG] Loading mojo org.openjfx:javafx-maven-plugin:0.0.8:run from plugin realm ClassRealm[plugin>org.openjfx:javafx-maven-plugin:0.0.8, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@5a07e868]
+[DEBUG] Configuring mojo execution 'org.openjfx:javafx-maven-plugin:0.0.8:run:default-cli' with basic configurator -->
+[DEBUG]   (f) async = false
+[DEBUG]   (f) asyncDestroyOnShutdown = true
+[DEBUG]   (f) basedir = C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject
+[DEBUG]   (f) builddir = C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target
+[DEBUG]   (f) compilePath = [C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes, C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2-win.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2-win.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2-win.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2.jar, C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2-win.jar]
+[DEBUG]   (f) executable = java
+[DEBUG]   (f) includePathExceptionsInClasspath = false
+[DEBUG]   (f) mainClass = com.pokemonGame.MainApp
+[DEBUG]   (f) project = MavenProject: com.pokemonGame:Pokemon-Game:_v1.0 @ C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\pom.xml
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@605041a9
+[DEBUG]   (f) skip = false
+[DEBUG] -- end configuration --
+[DEBUG] Executable [C:\Users\donov\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin\java.exe]
+[DEBUG] Total dependencyArtifacts: 9
+[DEBUG] module descriptor path: null
+[DEBUG] Classpath:1
+[DEBUG]  C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes
+[DEBUG] Modulepath: 8
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2-win.jar
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2.jar
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2-win.jar
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2.jar
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2-win.jar
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2.jar
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2-win.jar
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2.jar
+[DEBUG] pathElements: 9
+[DEBUG]  C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes :: null
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2-win.jar :: javafx.base
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2.jar :: javafx.baseEmpty
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2-win.jar :: javafx.controls
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2.jar :: javafx.controlsEmpty
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2-win.jar :: javafx.fxml
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2.jar :: javafx.fxmlEmpty
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2-win.jar :: javafx.graphics
+[DEBUG]  C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2.jar :: javafx.graphicsEmpty
+[DEBUG] Executing command line: [C:\Users\donov\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin\java.exe, --module-path, C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2-win.jar;C:\Users\donov\.m2\repository\org\openjfx\javafx-base\21.0.2\javafx-base-21.0.2.jar;C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2-win.jar;C:\Users\donov\.m2\repository\org\openjfx\javafx-controls\21.0.2\javafx-controls-21.0.2.jar;C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2-win.jar;C:\Users\donov\.m2\repository\org\openjfx\javafx-fxml\21.0.2\javafx-fxml-21.0.2.jar;C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2-win.jar;C:\Users\donov\.m2\repository\org\openjfx\javafx-graphics\21.0.2\javafx-graphics-21.0.2.jar, --add-modules, javafx.base,javafx.controls,javafx.fxml,javafx.graphics, -classpath, C:\Users\donov\OneDrive\Escritorio\Escuela\Semester_2\POO\pokemonProject\target\classes, com.pokemonGame.MainApp]
+[DEBUG] SUCCESS build of project com.pokemonGame:Pokemon-Game
+[DEBUG] Builder state: blocked=0 finished=1 ready-or-running=0 
+[DEBUG] ------------------------------------------------------------------------
+[DEBUG] Build Time Summary:
+[DEBUG] ------------------------------------------------------------------------
+[DEBUG] Pokemon-Game [12.115s]
+[DEBUG]   maven-resources-plugin:resources (default-resources) ..... [0.014s]
+[DEBUG]   maven-compiler-plugin:compile (default-compile) .......... [0.020s]
+[DEBUG]   javafx-maven-plugin:run (default-cli) .................... [12.068s]
+[DEBUG] ------------------------------------------------------------------------
+[DEBUG]   javafx-maven-plugin:run (default-cli) .................... [12.068s]
+[DEBUG]   maven-compiler-plugin:compile (default-compile) .......... [0.020s]
+[DEBUG]   maven-resources-plugin:resources (default-resources) ..... [0.014s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.171 s (Wall Clock)
+[INFO] Finished at: 2025-05-23T19:49:20-06:00
+[INFO] ------------------------------------------------------------------------

@@ -14,7 +14,7 @@ public class InitController {
     @FXML private Button StartGameButton;
 
     @FXML public void initialize(){
-        if(players.size()==0){
+        if(players.size()<=1){
             StartGameButton.setDisable(true);
         }
     }

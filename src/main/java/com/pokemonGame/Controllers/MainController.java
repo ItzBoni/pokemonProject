@@ -32,6 +32,10 @@ public class MainController{
 
         loader = new FXMLLoader(getClass().getResource("/GUI/Views/PlayersRegister.fxml"));
         views.put(1, loader.load());
+        
+        PlayersRegController playerPageController = loader.getController();
+        playerPageController.setPlayersLists(players);
+        playerPageController.setMainController(this);
 
         addAllNodesToRoot();
         navigateToView(0);
