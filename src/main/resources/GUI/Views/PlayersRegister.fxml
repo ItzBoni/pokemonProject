@@ -15,7 +15,7 @@
       >
 
       <children>
-            <Label text="Bienvenido al juego" styleClass="Start__Page__Title"/>
+            <Label text="Esta es la otra ventana" styleClass="Start__Page__Title"/>
             <Label text="Para comenzar favor de registrar minimo dos jugadores" styleClass="Start__Page__Description"/>
             <HBox spacing="20" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">
                   <Button text="Registro de Jugadores" onAction ="#goToPlayerRegister"  styleClass="Start__Page__Buttons"/>

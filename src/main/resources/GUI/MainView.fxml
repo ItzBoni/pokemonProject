@@ -11,11 +11,8 @@
 
    <children>
       <StackPane fx:id="contentArea" VBox.vgrow="ALWAYS">
-            <!-- En el id tienen que poner el identificador y en el source la vista a la que pertenece. -->
-         <fx:include fx:id="StartPage" source="Views/InitView.fxml" />
-         <!-- <fx:include fx:id="-" source="*.fxml" /> -->
-
+           
       </StackPane>
    </children>
-   
+
 </VBox>

@@ -30,7 +30,17 @@ public class MainController{
         startPageController.setPlayersLists(players);
         startPageController.setMainController(this);
 
+        loader = new FXMLLoader(getClass().getResource("/GUI/Views/PlayersRegister.fxml"));
+        views.put(1, loader.load());
+
+        addAllNodesToRoot();
         navigateToView(0);
+    }
+    
+    @FXML void addAllNodesToRoot(){
+        for(Node n: views.values()){
+            contentArea.getChildren().add(n);
+        }
     }
 
     @FXML public void navigateToView(Integer view){
