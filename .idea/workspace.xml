@@ -5,47 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b1eccc6-d96f-4325-9b2b-a5b96f7fbc4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/player/Player$Bag.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/player/Player$Bag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Attack$attackType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Attack$attackType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Attack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Attack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Pokemon$tipo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Pokemon$tipo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Pokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Pokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/TablaTipos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/TablaTipos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Bulbasaur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Bulbasaur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Charmander.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Charmander.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Digglet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Digglet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Pikachu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Pikachu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Squirtle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Squirtle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/potions/Potion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/potions/Potion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/potions/PotionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/potions/PotionType.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/menus" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ItzBoni"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ItzBoni&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ItzBoni/pokemonProject.git",
-    "accountId": "27e3ee08-d1a8-42cd-b871-9cef41aee538"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ItzBoni/pokemonProject.git&quot;,
+    &quot;accountId&quot;: &quot;27e3ee08-d1a8-42cd-b871-9cef41aee538&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -58,6 +52,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.MainApp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -156,7 +151,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
