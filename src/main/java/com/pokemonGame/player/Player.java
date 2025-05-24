@@ -11,6 +11,7 @@ public class Player {
     private String name;
     private List<Pokemon> pokemons = new ArrayList<>();
     private int defeatedPokemons = 0;
+    public Bag personalBag = new Bag();
 
     public Player(String name) {
         this.name = name;
@@ -20,15 +21,6 @@ public class Player {
     public void addPokemon(Pokemon p) {
         pokemons.add(p);
     }
-
-    // public void takeTurn(Player other) {
-    //     if (!pokemons.isEmpty()) {
-    //         Pokemon attacker = pokemons.get(0);
-    //         Pokemon target = other.pokemons.get(0);
-    //         attacker.attack(target);
-    //     }
-    //     checkPokemon();
-    // }
 
     public void revivePoke(){
         for(Pokemon p: pokemons){
@@ -60,14 +52,26 @@ public class Player {
     public class Bag {
         List<Potion> potions = new ArrayList<>();
 
+        public Bag(){
+            this.addPotion(new Potion("HEALING", 14));
+            this.addPotion(new Potion("STRENGTH", 8));
+            this.addPotion(new Potion("DEFENSE", 6));
+            this.addPotion(new Potion("SPEED", 10));
+        }
+
         public void addPotion(Potion p) {
             potions.add(p);
         }
 
-        public void usePotion(Pokemon p) {
-            if (!potions.isEmpty()) {
-                Potion potion = potions.remove(0);
-                potion.getEffectValue(p);
+        public void usePotion(Pokemon p, String type) {
+            for (Potion potion : potions){
+                if (potion.getType()== type) {
+
+                    if(potion.remainingUse()==0) continue;
+
+                    potion.getEffectValue(p);
+                    break;
+                }
             }
         }
     }

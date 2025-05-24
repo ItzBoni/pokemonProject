@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.fxml.FXMLLoader?>
+<?import javafx.scene.control.Label?>
+
+<VBox alignment="CENTER" spacing="70.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.pokemonGame.Controllers.PlayersRegController"
+      styleClass="Register__Page__Container"
+      >
+
+      <children>
+            <VBox spacing="40" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">
+                <Label text="Registro de jugadores" styleClass="Start__Page__Title"/>
+                <Label text="Introduce los datos para tu jugador" styleClass="Start__Page__Description"/>
+            </VBox>
+
+            <VBox spacing="20" alignment="CENTER"  styleClass="Register__Player__Container">
+                <Label text="Introduce tu nombre:" styleClass="Register__Player__Title"/>
+                <TextArea fx:id="Register__Player__Field" styleClass="Register__Player__Field" promptText="Nombre..." prefRowCount="1" wrapText="true" />
+            </VBox>
+            
+            <VBox spacing="20" alignment="CENTER"  styleClass="Register__Pokemon__Container">
+                <Label text="Escoge tus pokemones iniciales:" styleClass="Register__Pokemon__Title"/>
+                
+                <HBox spacing="20" alignment="CENTER"  styleClass="Register__Pokemon__Select__Container">
+                    <VBox alignment="CENTER" spacing = "10" styleClass="Register__Pokemon__Select">
+                        <Label text="Pokemon 1:" fx:id="selectPokemon_title_1" styleClass="Register__Pokemon__Select__Title"/>
+                        <ComboBox  fx:id="selectPokemon_1" promptText ="Elige un pokemon" styleClass="Register__Pokemon__Select__ComboBox"/>
+                    </VBox>
+                    <VBox alignment="CENTER" spacing = "10" styleClass="Register__Pokemon__Select">
+                        <Label text="Pokemon 2:" fx:id="selectPokemon_title_2" styleClass="Register__Pokemon__Select__Title"/>
+                        <ComboBox  fx:id="selectPokemon_2" promptText ="Elige un pokemon" styleClass="Register__Pokemon__Select__ComboBox"/>
+                    </VBox>
+                    <VBox alignment="CENTER" spacing = "10" styleClass="Register__Pokemon__Select">
+                        <Label text="Pokemon 3:" fx:id="selectPokemon_title_3" styleClass="Register__Pokemon__Select__Title"/>
+                        <ComboBox  fx:id="selectPokemon_3" promptText ="Elige un pokemon" styleClass="Register__Pokemon__Select__ComboBox"/>
+                    </VBox>
+                    
+                    <Button text="Regresar" onAction ="#goToMainMenu" fx:id="returnButton" styleClass="Start__Page__Buttons"/>
+                </HBox>
+
+                <HBox spacing="20" alignment="CENTER"  styleClass="Register__Pokemon__Select__Container">
+                    <VBox alignment="CENTER" spacing = "10" styleClass="Register__Pokemon__Select">
+                        <Label text="Pokemon 4:" fx:id="selectPokemon_title_4" styleClass="Register__Pokemon__Select__Title"/>
+                        <ComboBox  fx:id="selectPokemon_4" promptText ="Elige un pokemon" styleClass="Register__Pokemon__Select__ComboBox"/>
+                    </VBox>
+                    <VBox alignment="CENTER" spacing = "10" styleClass="Register__Pokemon__Select">
+                        <Label text="Pokemon 5:" fx:id="selectPokemon_title_5" styleClass="Register__Pokemon__Select__Title"/>
+                        <ComboBox  fx:id="selectPokemon_5" promptText ="Elige un pokemon" styleClass="Register__Pokemon__Select__ComboBox"/>
+                    </VBox>
+                    <VBox alignment="CENTER" spacing = "10" styleClass="Register__Pokemon__Select">
+                        <Label text="Pokemon 6:" fx:id="selectPokemon_title_6" styleClass="Register__Pokemon__Select__Title"/>
+                        <ComboBox  fx:id="selectPokemon_6" promptText ="Elige un pokemon" styleClass="Register__Pokemon__Select__ComboBox"/>
+                    </VBox>
+                    
+                    <Button text="Registrar jugador" onAction ="#registerPlayer" fx:id="registerPlayerButton" styleClass="Start__Page__Buttons"/>
+                </HBox>
+            </VBox>
+      </children>
+
+</VBox>

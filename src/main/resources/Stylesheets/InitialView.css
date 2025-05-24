@@ -1,0 +1,43 @@
+.Start__Page__Container{
+    -fx-background-color: black;
+}
+
+.Start__Page__Title{
+    -fx-font-size : 80px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( gaussian, yellow, 5, 0, 2, 2 );
+}
+.Start__Page__Description{
+    -fx-font-size : 40px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( gaussian, yellow, 5, 0, 0, 0 );
+}
+
+.Start__Page__Buttons__Container{
+    -fx-hbox-margin:50 10 100 10;
+}
+
+.Start__Page__Buttons{
+    -fx-font-size : 20px;
+    -fx-text-fill: yellow;
+    
+    -fx-border-radius: 0;
+    -fx-border-width: 1px;
+    -fx-border-color:yellow;
+
+    -fx-min-width : 100px;
+    -fx-min-height :50px;
+    -fx-max-width : 200px;
+    -fx-max-height :100px;
+    
+    -fx-background-color:rgb(0, 0, 0);
+    -fx-effect: dropshadow( gaussian, yellow, 10, 0, 0, 0 );
+}
+.Start__Page__Buttons:disabled{
+    -fx-text-fill: gray;
+    -fx-background-color:rgb(33, 33, 33);
+}
+.Start__Page__Buttons:hover{
+    -fx-text-fill: rgb(177, 177, 11);
+    -fx-background-color:rgb(35, 35, 35);
+}

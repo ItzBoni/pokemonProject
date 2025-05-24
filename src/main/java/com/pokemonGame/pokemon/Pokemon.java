@@ -138,7 +138,7 @@ public abstract class Pokemon implements Evolvable {
 
     @Override
     public String toString() {
-        return name + " [Level " + level + ", HP: " + health + "]";
+        return name + " [Max HP " + hpMax + ", HP: " + health +", Velocity" + velocidad +"]";
     }
      
     public void recibirAtaque(double daño, Attack.attackType t) {
