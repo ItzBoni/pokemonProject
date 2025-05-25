@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.StackPane;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 
 import java.util.HashMap;
 
@@ -16,6 +17,7 @@ public class MainController{
     
     HashMap <Integer, Node> views = new HashMap<>();
     ArrayList<Player> players = new ArrayList<>();
+    ArrayList<Button> buttonNeedPlayers = new ArrayList<>();
 
     @FXML
     private StackPane contentArea;
@@ -58,6 +60,17 @@ public class MainController{
             
             this.views.get(i).setVisible(true);
             this.views.get(i).setManaged(true);
+        }
+    }
+
+    public void addButtonToObserve(Button b){
+        buttonNeedPlayers.add(b);
+        b.setDisable(true);
+    }
+
+    public void enableButtonsOfPlayers(){
+        for (Button b: buttonNeedPlayers){
+            b.setDisable(false);
         }
     }
 }

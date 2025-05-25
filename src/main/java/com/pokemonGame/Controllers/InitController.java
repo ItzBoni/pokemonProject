@@ -25,6 +25,8 @@ public class InitController {
 
     public void setMainController(MainController father){
         this.father = father;
+        
+        father.addButtonToObserve(StartGameButton);
     }
 
     @FXML public void goToPlayerRegister(){

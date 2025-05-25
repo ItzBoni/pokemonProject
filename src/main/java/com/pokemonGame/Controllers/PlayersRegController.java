@@ -62,6 +62,8 @@ public class PlayersRegController {
 
     public void setMainController(MainController father){
         this.father = father;
+        
+        father.addButtonToObserve(returnButton);
     }
 
     public void fillComboBox(ArrayList<String> dataList, ComboBox<String> combo) {
@@ -83,10 +85,8 @@ public class PlayersRegController {
     }
 
     private boolean verifyIfNameExists(String n){
-        if (n == "") return true;
-        
         for(Player p: players){
-            if (p.getName() == n){
+            if (p.getName().equals(n)){
                 return true;
             }
         }
@@ -135,10 +135,12 @@ public class PlayersRegController {
             showWarningAlert("Alguno de los campos de pokemon esta vacio.");
             
         }else{
-            if(verifyIfNameExists(Register__Player__Field.getText())){
+            if( Register__Player__Field.getText().trim().isEmpty()){
+                showWarningAlert("No se aceptan espacios en blanco.");
+            }else if (verifyIfNameExists(Register__Player__Field.getText().trim())){
                 showWarningAlert("El nombre ya existe.");
             }else{
-                Player p =  new Player(Register__Player__Field.getText());
+                Player p =  new Player(Register__Player__Field.getText().trim());
                 p.addPokemon(returnPokemon(selectPokemon_1.getSelectionModel().getSelectedItem()));
                 p.addPokemon(returnPokemon(selectPokemon_2.getSelectionModel().getSelectedItem()));
                 p.addPokemon(returnPokemon(selectPokemon_3.getSelectionModel().getSelectedItem()));
@@ -146,11 +148,13 @@ public class PlayersRegController {
                 p.addPokemon(returnPokemon(selectPokemon_5.getSelectionModel().getSelectedItem()));
                 p.addPokemon(returnPokemon(selectPokemon_6.getSelectionModel().getSelectedItem()));
                 players.add(p);
+
+                System.out.println(p + " \t " + p.getName());
             }
         }
 
         if(players.size()>1){
-            returnButton.setDisable(false);
+            father.enableButtonsOfPlayers();
         }
     }
 }
