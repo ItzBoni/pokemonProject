@@ -32,10 +32,24 @@ public class MainController{
 
         loader = new FXMLLoader(getClass().getResource("/GUI/Views/PlayersRegister.fxml"));
         views.put(1, loader.load());
-        
+
+
         PlayersRegController playerPageController = loader.getController();
         playerPageController.setPlayersLists(players);
         playerPageController.setMainController(this);
+
+
+        loader = new FXMLLoader(getClass().getResource("/GUI/Views/combatView.fxml"));
+        System.out.println(loader);
+        views.put(3, loader.load());
+
+        for(Node n: views.values()){
+            System.out.println(n);
+        }
+
+        CombatController combat = loader.getController();
+        combat.setPlayersLists(players);
+        combat.setMainController(this);
 
         addAllNodesToRoot();
         navigateToView(0);

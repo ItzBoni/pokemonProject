@@ -11,6 +11,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import com.pokemonGame.player.Player;
 import com.pokemonGame.pokemon.Pokemon;
@@ -83,10 +84,10 @@ public class PlayersRegController {
     }
 
     private boolean verifyIfNameExists(String n){
-        if (n == "") return true;
+        if (Objects.equals(n, "")) return true;
         
         for(Player p: players){
-            if (p.getName() == n){
+            if (Objects.equals(p.getName(), n)){
                 return true;
             }
         }
