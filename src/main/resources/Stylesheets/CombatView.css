@@ -1,0 +1,13 @@
+.Combat__Page__Container{
+    -fx-background-color: black;
+}
+
+.Text__Container{
+    -fx-hbox-margin:50 10 100 10
+}
+
+.Console__Output__Area{
+    -fx-background-color: black;
+    -fx-font-size : 20px;
+    -fx-text-fill : gray;
+}

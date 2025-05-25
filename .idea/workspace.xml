@@ -4,48 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b1eccc6-d96f-4325-9b2b-a5b96f7fbc4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="4b1eccc6-d96f-4325-9b2b-a5b96f7fbc4a" name="Changes" comment="Added all GUI files, merged with features branch, created CombatController.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/player/Player$Bag.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/player/Player$Bag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Attack$attackType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Attack$attackType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Attack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Attack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Pokemon$tipo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Pokemon$tipo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Pokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/Pokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/TablaTipos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/TablaTipos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Bulbasaur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Bulbasaur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Charmander.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Charmander.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Digglet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Digglet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Pikachu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Pikachu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Squirtle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/pokemon/pokedex/Squirtle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/potions/Potion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/potions/Potion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pokemonGame/potions/PotionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pokemonGame/potions/PotionType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/CombatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUI/Views/combatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUI/Views/combatView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Views/combatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Views/combatView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/menus" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ItzBoni"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ItzBoni&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ItzBoni/pokemonProject.git",
-    "accountId": "27e3ee08-d1a8-42cd-b871-9cef41aee538"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ItzBoni/pokemonProject.git&quot;,
+    &quot;accountId&quot;: &quot;27e3ee08-d1a8-42cd-b871-9cef41aee538&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -55,19 +53,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Angel/Documents/Up ISGC/2do Semestre/Programacion orientada a objetos",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Angel/Documents/Up ISGC/2do Semestre/Programacion orientada a objetos&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="pokemonProject" />
@@ -125,6 +124,15 @@
       <updated>1747676439970</updated>
       <workItem from="1747676443251" duration="100000" />
     </task>
+    <task id="LOCAL-00001" summary="Added all GUI files, merged with features branch, created CombatController.">
+      <option name="closed" value="true" />
+      <created>1748191999116</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748191999116</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +164,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -167,5 +175,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added all GUI files, merged with features branch, created CombatController." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added all GUI files, merged with features branch, created CombatController." />
   </component>
 </project>

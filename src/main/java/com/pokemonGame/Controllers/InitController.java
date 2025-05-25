@@ -12,6 +12,7 @@ public class InitController {
     MainController father;
 
     @FXML private Button StartGameButton;
+    @FXML private Button CombatGameButton;
 
     @FXML public void initialize(){
         if(players.size()<=1){
@@ -35,4 +36,5 @@ public class InitController {
     @FXML public void goToGame(){
         father.navigateToView(2);
     }
+    @FXML public void goToCombat() {father.navigateToView(3); }
 }

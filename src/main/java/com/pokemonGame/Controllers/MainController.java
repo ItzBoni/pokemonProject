@@ -34,16 +34,20 @@ public class MainController{
 
         loader = new FXMLLoader(getClass().getResource("/GUI/Views/PlayersRegister.fxml"));
         views.put(1, loader.load());
-        
+
+
         PlayersRegController playerPageController = loader.getController();
         playerPageController.setPlayersLists(players);
         playerPageController.setMainController(this);
 
-        loader = new FXMLLoader(getClass().getResource("/GUI/Views/MainMenu.fxml"));
+
+        loader = new FXMLLoader(getClass().getResource("/GUI/Views/combatView.fxml"));
+        System.out.println(loader);
         views.put(2, loader.load());
-        
-        MainMenuController mainMenuController = loader.getController();
-        mainMenuController.setMainController(this);
+
+        CombatController combat = loader.getController();
+        combat.setPlayersLists(players);
+        combat.setMainController(this);
 
         addAllNodesToRoot();
         navigateToView(0);

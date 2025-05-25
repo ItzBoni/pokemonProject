@@ -11,6 +11,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import com.pokemonGame.player.Player;
 import com.pokemonGame.pokemon.Pokemon;
