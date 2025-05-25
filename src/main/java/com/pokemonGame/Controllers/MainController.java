@@ -39,6 +39,12 @@ public class MainController{
         playerPageController.setPlayersLists(players);
         playerPageController.setMainController(this);
 
+        loader = new FXMLLoader(getClass().getResource("/GUI/Views/MainMenu.fxml"));
+        views.put(2, loader.load());
+        
+        MainMenuController mainMenuController = loader.getController();
+        mainMenuController.setMainController(this);
+
         addAllNodesToRoot();
         navigateToView(0);
     }

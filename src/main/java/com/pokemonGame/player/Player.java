@@ -2,6 +2,11 @@
 package com.pokemonGame.player;
 
 import  com.pokemonGame.pokemon.Pokemon;
+import com.pokemonGame.pokemon.pokedex.Bulbasaur;
+import com.pokemonGame.pokemon.pokedex.Charmander;
+import com.pokemonGame.pokemon.pokedex.Digglet;
+import com.pokemonGame.pokemon.pokedex.Pikachu;
+import com.pokemonGame.pokemon.pokedex.Squirtle;
 import  com.pokemonGame.potions.Potion;
 
 import java.util.ArrayList;
@@ -74,6 +79,45 @@ public class Player {
                 }
             }
         }
+    }
+
+    private static Pokemon returnPokemon(String p){
+        Pokemon poke;
+        switch (p) {
+            case "Pikachu":
+                poke = new Pikachu();
+                break;
+        
+            case "Bulbasaur":
+                poke = new Bulbasaur();
+                break;
+        
+            case "Digglet":
+                poke = new Digglet();
+                break;
+        
+            case "Squirtle":
+                poke = new Squirtle();
+                break;
+        
+            case "Charmander":
+                poke = new Charmander();
+                break;
+        
+            default:
+                poke = new Charmander();
+                break;
+        }
+
+        return poke;
+    }
+
+    public void recoverBeforeBattle(){
+        for (int i = 0; i < pokemons.size(); i++) {
+        pokemons.set(i, returnPokemon(pokemons.get(i).getName()));
+        }
+
+        setPokemonDefeated(0);
     }
 
     @Override

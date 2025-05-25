@@ -18,6 +18,7 @@ public class MainApp extends Application {
         Scene scene = new Scene(root, 1200, 800); // Tamaño de la ventana
         scene.getStylesheets().add(getClass().getResource("/Stylesheets/InitialView.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource("/Stylesheets/PlayerRegister.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/Stylesheets/MainMenu.css").toExternalForm());
         primaryStage.setTitle("Pokemon Game by ADS");
         primaryStage.setScene(scene);
         primaryStage.show();
