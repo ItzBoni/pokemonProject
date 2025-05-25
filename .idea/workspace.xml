@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b1eccc6-d96f-4325-9b2b-a5b96f7fbc4a" name="Changes" comment="Added all GUI files, merged with features branch.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Stylesheets/CombatView.css" afterDir="false" />
+    <list default="true" id="4b1eccc6-d96f-4325-9b2b-a5b96f7fbc4a" name="Changes" comment="Added all GUI files, merged with features branch, created CombatController.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/CombatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/InitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/InitController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/PlayersRegController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/PlayersRegController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/GUI/Views/InitView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUI/Views/InitView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/GUI/Views/combatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUI/Views/combatView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GUI/Views/combatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Views/combatView.fxml" afterDir="false" />
     </list>
@@ -129,6 +124,15 @@
       <updated>1747676439970</updated>
       <workItem from="1747676443251" duration="100000" />
     </task>
+    <task id="LOCAL-00001" summary="Added all GUI files, merged with features branch, created CombatController.">
+      <option name="closed" value="true" />
+      <created>1748191999116</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748191999116</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,5 +175,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added all GUI files, merged with features branch, created CombatController." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added all GUI files, merged with features branch, created CombatController." />
   </component>
 </project>

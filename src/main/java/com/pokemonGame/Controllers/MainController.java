@@ -41,11 +41,7 @@ public class MainController{
 
         loader = new FXMLLoader(getClass().getResource("/GUI/Views/combatView.fxml"));
         System.out.println(loader);
-        views.put(3, loader.load());
-
-        for(Node n: views.values()){
-            System.out.println(n);
-        }
+        views.put(2, loader.load());
 
         CombatController combat = loader.getController();
         combat.setPlayersLists(players);

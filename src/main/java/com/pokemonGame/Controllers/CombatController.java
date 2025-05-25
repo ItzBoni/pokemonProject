@@ -25,11 +25,11 @@ public class CombatController {
     @FXML private Button useStrengthPotion;
     @FXML private Button useDefPotion;
     @FXML private Button useSpeedPotion;
+    @FXML private Button forfeit;
 
     @FXML private TextArea ConsoleOutput;
 
     public void initialize() {
-
         redirectSystemOutputToConsole();
     }
 

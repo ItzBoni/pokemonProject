@@ -21,7 +21,17 @@
         </HBox>
 
         <HBox spacing="20" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">
-            <Button text="Pasar de turnos" onAction ="#nextTurn" styleClass="Start__Page__Buttons"/>
+            <Button text="Pasar de turnos" onAction ="#nextTurn" fx:id="passTurn" styleClass="Start__Page__Buttons"/>
+            <Button text="Atacar" onAction ="#nextTurn" fx:id="attack" styleClass="Start__Page__Buttons"/>
+            <Button text="Poción de curación" onAction ="#nextTurn" fx:id="useHealingPotion" styleClass="Start__Page__Buttons"/>
+        </HBox>
+        <HBox spacing="20" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">
+            <Button text="Poción de fuerza" onAction ="#nextTurn" fx:id="useDefPotion" styleClass="Start__Page__Buttons"/>
+            <Button text="Poción de defensa" onAction ="#nextTurn" fx:id="useStrengthPotion" styleClass="Start__Page__Buttons"/>
+            <Button text="Poción de velocidad" onAction ="#nextTurn" fx:id="useSpeedPotion" styleClass="Start__Page__Buttons"/>
+        </HBox>
+        <HBox spacing="20" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">
+            <Button text="Rendirse" onAction ="#nextTurn" fx:id="forfeit" styleClass="Start__Page__Buttons"/>
         </HBox>
     </children>
 
