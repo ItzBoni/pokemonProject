@@ -24,4 +24,7 @@ public class MainMenuController {
     @FXML public void goToStart(){
         father.navigateToView(0);
     }
+    @FXML public void goToBattle(){
+        father.navigateToView(3);
+    }
 }

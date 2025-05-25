@@ -22,8 +22,8 @@
             <Label text="Selecciona alguna acción" styleClass="Main__Page__Description"/>
             <HBox spacing="20" alignment="CENTER"  styleClass="Main__Page__Buttons__Container">
                   <Button text="Registro de Jugadores" onAction ="#goToPlayerRegister"  styleClass="Main__Page__Buttons"/>
-                  <Button text="Combates 1 vs 1" onAction ="#goToStart" styleClass="Main__Page__Buttons"/>
-                  <Button text="Combates todos vs todos" onAction ="#goToPlayerRegister"  styleClass="Main__Page__Buttons"/>
+                  <Button text="Combates 1 vs 1" onAction ="#goToBattle" styleClass="Main__Page__Buttons"/>
+                  <Button text="Combates todos vs todos" onAction ="#goToBattle"  styleClass="Main__Page__Buttons"/>
                   <Button text="Regresar al menu" onAction ="#goToStart" styleClass="Main__Page__Buttons"/>
             </HBox>
       </children>

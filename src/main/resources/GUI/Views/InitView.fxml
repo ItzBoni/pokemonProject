@@ -20,7 +20,6 @@
             <HBox spacing="20" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">
                   <Button text="Registro de Jugadores" onAction ="#goToPlayerRegister"  styleClass="Start__Page__Buttons"/>
                   <Button text="Iniciar juego" onAction ="#goToGame" fx:id="StartGameButton" styleClass="Start__Page__Buttons"/>
-                  <Button text="Ir a combate!!" onAction="#goToCombat" fx:id="CombatGameButton" styleClass="Start__Page__Buttons"/>
             </HBox>
       </children>
 

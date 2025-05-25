@@ -41,9 +41,16 @@ public class MainController{
         playerPageController.setMainController(this);
 
 
-        loader = new FXMLLoader(getClass().getResource("/GUI/Views/combatView.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/GUI/Views/MainMenu.fxml"));
         System.out.println(loader);
         views.put(2, loader.load());
+
+        MainMenuController mainMenuController = loader.getController();
+        mainMenuController.setMainController(this);
+
+        loader = new FXMLLoader(getClass().getResource("/GUI/Views/combatView.fxml"));
+        System.out.println(loader);
+        views.put(3, loader.load());
 
         CombatController combat = loader.getController();
         combat.setPlayersLists(players);

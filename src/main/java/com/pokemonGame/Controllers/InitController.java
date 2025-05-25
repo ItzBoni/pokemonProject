@@ -36,5 +36,4 @@ public class InitController {
     @FXML public void goToGame(){
         father.navigateToView(2);
     }
-    @FXML public void goToCombat() {father.navigateToView(3); }
 }
