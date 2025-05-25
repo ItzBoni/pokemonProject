@@ -1,8 +1,11 @@
 package com.pokemonGame.Controllers;
 
+import com.pokemonGame.pokemon.Pokemon;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.StackPane;
 import javafx.scene.Node;
@@ -18,6 +21,8 @@ import java.util.ArrayList;
 public class CombatController {
     MainController father;
     ArrayList<Player> players = new ArrayList<>();
+    Player player1, player2;
+    private boolean turn = false; //FALSE PARA TURNO 1 TRUE PARA TURNO 2
 
     @FXML private Button passTurn;
     @FXML private Button attack;
@@ -26,11 +31,19 @@ public class CombatController {
     @FXML private Button useDefPotion;
     @FXML private Button useSpeedPotion;
     @FXML private Button forfeit;
+    @FXML private ComboBox<Pokemon> pokemonList;
 
     @FXML private TextArea ConsoleOutput;
 
     public void initialize() {
         redirectSystemOutputToConsole();
+        player1 = players.get(0);
+        player2 = players.get(1);
+
+//        player1.recoverBeforeBattle();
+//        player2.recoverBeforeBattle();
+//
+//        pokemonList.setItems(FXCollections.observableArrayList(player1.getAllPokemons()));
     }
 
     private void redirectSystemOutputToConsole() {
@@ -68,4 +81,5 @@ public class CombatController {
     public void nextTurn(){
 
     }
+
 }

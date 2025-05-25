@@ -9,6 +9,7 @@
 <?import javafx.scene.control.Label?>
 
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
 <VBox alignment="CENTER" spacing="10.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.pokemonGame.Controllers.CombatController"
@@ -18,6 +19,10 @@
         <Label text="Combate" styleClass="Start__Page__Title"/>
         <HBox spacing="20" alignment="CENTER" styleClass="Text__Container">
             <TextArea fx:id="ConsoleOutput" editable="false" wrapText="true" prefHeight="200" styleClass="Console__Output__Area"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER" styleClass="Text__Container">
+            <ComboBox fx:id="PokemonList" prefWidth="200"/>
         </HBox>
 
         <HBox spacing="20" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">

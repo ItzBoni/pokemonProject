@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b1eccc6-d96f-4325-9b2b-a5b96f7fbc4a" name="Changes" comment="Added all GUI files, merged with features branch, created CombatController.">
+    <list default="true" id="4b1eccc6-d96f-4325-9b2b-a5b96f7fbc4a" name="Changes" comment="Added buttons to the combat view.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/CombatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/GUI/Views/combatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUI/Views/combatView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GUI/Views/combatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Views/combatView.fxml" afterDir="false" />
     </list>

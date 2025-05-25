@@ -23,6 +23,24 @@ public class Player {
         this.defeatedPokemons = 0;
     }
 
+//    public Pokemon accessPokemon(String p){
+//        Pokemon poke = null;
+//
+//        for(Pokemon i: pokemons){
+//            if(i.getName().equals(p)){
+//                poke = i;
+//            }
+//
+//            break;
+//        }
+//
+//        return poke;
+//    }
+
+    public List<Pokemon> getAllPokemons(){
+        return this.pokemons;
+    }
+
     public void addPokemon(Pokemon p) {
         pokemons.add(p);
     }
@@ -114,7 +132,7 @@ public class Player {
 
     public void recoverBeforeBattle(){
         for (int i = 0; i < pokemons.size(); i++) {
-        pokemons.set(i, returnPokemon(pokemons.get(i).getName()));
+            pokemons.set(i, returnPokemon(pokemons.get(i).getName()));
         }
 
         setPokemonDefeated(0);
