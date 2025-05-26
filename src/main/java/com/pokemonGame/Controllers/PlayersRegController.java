@@ -22,7 +22,7 @@ import com.pokemonGame.pokemon.pokedex.Pikachu;
 import com.pokemonGame.pokemon.pokedex.Squirtle;
 
 public class PlayersRegController {
-    ArrayList<Player> players = new ArrayList<>();
+    ObservableList<Player> players = FXCollections.observableArrayList();
     MainController father;
 
     @FXML private ComboBox<String> selectPokemon_1;
@@ -57,7 +57,7 @@ public class PlayersRegController {
         }
     }
 
-    public void setPlayersLists(ArrayList<Player> list){
+    public void setPlayersLists(ObservableList<Player> list){
         this.players = list;
     }
 

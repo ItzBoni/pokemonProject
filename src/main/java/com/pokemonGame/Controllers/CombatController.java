@@ -1,5 +1,6 @@
 package com.pokemonGame.Controllers;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 
 public class CombatController {
     MainController father;
-    ArrayList<Player> players = new ArrayList<>();
+    ObservableList<Player> players;
 
     @FXML private Button passTurn;
     @FXML private Button attack;
@@ -57,7 +58,7 @@ public class CombatController {
     }
 
 
-    public void setPlayersLists(ArrayList<Player> list){
+    public void setPlayersLists(ObservableList<Player> list){
         this.players = list;
     }
 
