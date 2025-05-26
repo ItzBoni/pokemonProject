@@ -15,9 +15,14 @@ import com.pokemonGame.player.Player;
 public class CombatAllController {
     
     ObservableList<Player> playersForCombat;
+    MainController father;
 
     public void setPlayersForCombat(ObservableList<Player> list){
         this.playersForCombat = list;
+    }
+
+    public void setMainController(MainController father){
+        this.father = father;
     }
 
 

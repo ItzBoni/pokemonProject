@@ -123,7 +123,7 @@ public class SelectPlayersController {
         if(numPlayers.intValue()==2){
             father.navigateToView(0);
         }else{
-            father.navigateToView(0);
+            father.navigateToView(5);
         }
     }
 

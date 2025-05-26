@@ -51,4 +51,9 @@ public class Attack implements Attackable{
             p.recibirAtaque(daño, this.aType);
         }
     }
+
+    @Override
+    public String toString(){
+        return this.name;
+    }
 }

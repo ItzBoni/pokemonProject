@@ -69,10 +69,22 @@ public class MainController{
 
         SelectPlayersController selectPlayersController = loader.getController();
         selectPlayersController.setPlayersList(players);
+        selectPlayersController.setPlayersForCombat(playersForCombat);
         selectPlayersController.setMainController(this);
         selectPlayersController.updateComboBoxesSelect(comboBoxesFromSelct);
         selectPlayersController.updateLabelSelect(labelFromSelect);
         selectPlayersController.setNumPlayers(numberOfPlayers);
+        
+
+        loader = new FXMLLoader(getClass().getResource("/GUI/Views/CombatFour.fxml"));
+        views.put(5, loader.load());
+
+        // CombatAllController combatAllController = loader.getController();
+        // combatAllController.setPlayersForCombat(playersForCombat);
+        // combatAllController.setMainController(this);
+        // combatAllController.updateComboBoxesSelect(comboBoxesFromSelct);
+        // combatAllController.updateLabelSelect(labelFromSelect);
+        // combatAllController.setNumPlayers(numberOfPlayers);
 
         addAllNodesToRoot();
         navigateToView(0);

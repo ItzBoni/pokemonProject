@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.fxml.FXMLLoader?>
+<?import javafx.scene.control.Label?>
+
+<VBox alignment="CENTER" spacing="40.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.pokemonGame.Controllers.CombatAllController"
+      styleClass="Start__Page__Container"
+      >
+
+      <children>
+            <Label text="This is a combat please make your movements" styleClass="CombatAll__Page__Title"/>
+            
+            <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                
+                <HBox spacing="700" alignment="CENTER_LEFT" styleClass="CombatAll__Page__Row__SubContainer">
+                    <VBox spacing="10" alignment="CENTER_LEFT" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Label text="Player:"  fx:id="CombatAll_Player_1"  styleClass="CombatAll__Page__Row__Label"/>
+                        <Label text="Pokemon health:" fx:id="CombatAll_Pokemon_1" styleClass="CombatAll__Page__Row__Label"/>
+                    </VBox>
+                    <VBox spacing="10" alignment="CENTER_RIGHT" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Label text="Player:"  fx:id="CombatAll_Player_2"  styleClass="CombatAll__Page__Row__Label"/>
+                        <Label text="Pokemon health:" fx:id="CombatAll_Pokemon_2" styleClass="CombatAll__Page__Row__Label"/>
+                    </VBox>
+                </HBox>
+
+                <HBox spacing="25" alignment="CENTER" styleClass="CombatAll__Page__Row__Container">
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Button fx:id="CombatAll_Attack_1_P_1" styleClass="CombatAll__Page__Row__Button"/>
+                        <Button fx:id="CombatAll_Attack_2_P_1" styleClass="CombatAll__Page__Row__Button"/>
+                    </VBox>
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Button fx:id="CombatAll_Attack_3_P_1" styleClass="CombatAll__Page__Row__Button"/>
+                        <Button fx:id="CombatAll_Attack_4_P_1" styleClass="CombatAll__Page__Row__Button"/>
+                    </VBox>
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Label text="Select objective:"  styleClass="CombatAll__Page__Row__Label"/>
+                        <Label text="Select pokemon:"  styleClass="CombatAll__Page__Row__Label"/>
+                    </VBox>
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <ComboBox  fx:id="SelectObjecctive_P_1" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
+                        <ComboBox  fx:id="selectPokemon_P_1" promptText ="Elige un pokemon" styleClass="CombatAll__Pokemon__Select"/>
+                    </VBox>
+                    
+                    <HBox styleClass="CombatAll__Page__Column__Divisor"></HBox>
+                    
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Label text="Select objective:"  styleClass="CombatAll__Page__Row__Label"/>
+                        <Label text="Select pokemon:"  styleClass="CombatAll__Page__Row__Label"/>
+                    </VBox>
+
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <ComboBox  fx:id="SelectObjecctive_P_2" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
+                        <ComboBox  fx:id="selectPokemon_P_2" promptText ="Elige un pokemon" styleClass="CombatAll__Pokemon__Select"/>
+                    </VBox>
+                    
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Button fx:id="CombatAll_Attack_3_P_2" styleClass="CombatAll__Page__Row__Button"/>
+                        <Button fx:id="CombatAll_Attack_4_P_2" styleClass="CombatAll__Page__Row__Button"/>
+                    </VBox>
+
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Button fx:id="CombatAll_Attack_1_P_2" styleClass="CombatAll__Page__Row__Button"/>
+                        <Button fx:id="CombatAll_Attack_2_P_2" styleClass="CombatAll__Page__Row__Button"/>
+                    </VBox>
+                </HBox>
+            
+            </VBox>
+
+            <HBox styleClass="CombatAll__Page__Row__Divisor"></HBox>
+            
+            <VBox spacing="25" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                
+                <HBox spacing="700" alignment="CENTER_LEFT" styleClass="CombatAll__Page__Row__SubContainer">
+                    <VBox spacing="10" alignment="CENTER_LEFT" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Label text="Player:"  fx:id="CombatAll_Player_3" styleClass="CombatAll__Page__Row__Label"/>
+                        <Label text="Pokemon health:" fx:id="CombatAll_Pokemon_3" styleClass="CombatAll__Page__Row__Label"/>
+                    </VBox>
+                    <VBox spacing="10" alignment="CENTER_RIGHT" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Label text="Player:" fx:id="CombatAll_Player_4" styleClass="CombatAll__Page__Row__Label"/>
+                        <Label text="Pokemon health:" fx:id="CombatAll_Pokemon_4" styleClass="CombatAll__Page__Row__Label"/>
+                    </VBox>
+                </HBox>
+
+                <HBox spacing="25" alignment="CENTER" styleClass="CombatAll__Page__Row__Container">
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Button fx:id="CombatAll_Attack_1_P_3" styleClass="CombatAll__Page__Row__Button"/>
+                        <Button fx:id="CombatAll_Attack_2_P_3" styleClass="CombatAll__Page__Row__Button"/>
+                    </VBox>
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Button fx:id="CombatAll_Attack_3_P_3" styleClass="CombatAll__Page__Row__Button"/>
+                        <Button fx:id="CombatAll_Attack_4_P_3" styleClass="CombatAll__Page__Row__Button"/>
+                    </VBox>
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Label text="Select objective:" styleClass="CombatAll__Page__Row__Label"/>
+                        <Label text="Select pokemon:"  styleClass="CombatAll__Page__Row__Label"/>
+                    </VBox>
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <ComboBox  fx:id="SelectObjecctive_P_3" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
+                        <ComboBox  fx:id="selectPokemon_P_3" promptText ="Elige un pokemon" styleClass="CombatAll__Pokemon__Select"/>
+                    </VBox>
+                    
+                    <HBox styleClass="CombatAll__Page__Column__Divisor"></HBox>
+                    
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Label text="Select objective:" styleClass="CombatAll__Page__Row__Label"/>
+                        <Label text="Select pokemon:"  styleClass="CombatAll__Page__Row__Label"/>
+                    </VBox>
+                    
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <ComboBox  fx:id="SelectObjecctive_P_4" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
+                        <ComboBox  fx:id="selectPokemon_P_4" promptText ="Elige un pokemon" styleClass="CombatAll__Pokemon__Select"/>
+                    </VBox>
+                    
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Button fx:id="CombatAll_Attack_3_P_4" styleClass="CombatAll__Page__Row__Button"/>
+                        <Button fx:id="CombatAll_Attack_4_P_4" styleClass="CombatAll__Page__Row__Button"/>
+                    </VBox>
+
+                    <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
+                        <Button fx:id="CombatAll_Attack_1_P_4" styleClass="CombatAll__Page__Row__Button"/>
+                        <Button fx:id="CombatAll_Attack_2_P_4" styleClass="CombatAll__Page__Row__Button"/>
+                    </VBox>
+                </HBox>
+
+            </VBox>
+
+            <HBox styleClass="CombatAll__Page__Row__Divisor"></HBox>
+
+            <HBox spacing="50" alignment="CENTER" styleClass="CombatAll__Page__Row__Container">
+                <Button text="Continue the turn" />
+                <Button text="End battle" />
+            </HBox>
+      </children>
+
+</VBox>
