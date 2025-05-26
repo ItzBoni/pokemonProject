@@ -106,10 +106,10 @@ public class CombatController {
 
     private void checkWinCondition() {
         if (player1.getDefeatedPokemons() >= 6) {
-            System.out.println(player2.getName() + " ha ganado la batalla 🎉");
+            System.out.println(player2.getName() + " ha ganado la batalla");
             endBattle(player2);
         } else if (player2.getDefeatedPokemons() >= 6) {
-            System.out.println(player1.getName() + " ha ganado la batalla 🎉");
+            System.out.println(player1.getName() + " ha ganado la batalla");
             endBattle(player1);
         }
     }
@@ -151,10 +151,8 @@ public class CombatController {
             return;
         }
 
-        // Attack logic (example numbers)
         int dmg = attackerPokemon.getAtaque();
-        defenderPokemon.recibirAtaque(dmg, Attack.attackType.ESPECIAL);
-
+        defenderPokemon.recibirAtaque(dmg, Attack.attackType.ESPECIAL); //Acá la vdd no supe como cambiarle el tipo de ataque dinamicamente -SB
         System.out.println(attackerPokemon.getName() + " atacó a " + defenderPokemon.getName() + " e hizo " + dmg + " de daño.");
 
         if (!defenderPokemon.getAlive()) {
