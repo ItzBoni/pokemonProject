@@ -47,12 +47,14 @@ public class MainController{
         MainMenuController mainMenuController = loader.getController();
         mainMenuController.setMainController(this);
 
+
         loader = new FXMLLoader(getClass().getResource("/GUI/Views/combatView.fxml"));
         views.put(3, loader.load());
 
         CombatController combat = loader.getController();
         combat.setPlayersLists(players);
         combat.setMainController(this);
+        mainMenuController.setCombat(combat);
 
         addAllNodesToRoot();
         navigateToView(0);

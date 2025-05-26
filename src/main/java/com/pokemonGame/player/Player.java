@@ -15,27 +15,16 @@ import java.util.List;
 public class Player {
     private String name;
     private List<Pokemon> pokemons = new ArrayList<>();
-    private int defeatedPokemons = 0;
+    private List<Pokemon> defeatedPokemons = new ArrayList<>();
     public Bag personalBag = new Bag();
 
     public Player(String name) {
         this.name = name;
-        this.defeatedPokemons = 0;
     }
 
-//    public Pokemon accessPokemon(String p){
-//        Pokemon poke = null;
-//
-//        for(Pokemon i: pokemons){
-//            if(i.getName().equals(p)){
-//                poke = i;
-//            }
-//
-//            break;
-//        }
-//
-//        return poke;
-//    }
+    public int getDefeatedPokemons(){
+        return defeatedPokemons.size();
+    }
 
     public List<Pokemon> getAllPokemons(){
         return this.pokemons;
@@ -51,21 +40,14 @@ public class Player {
         }
     }
 
-    public void checkPokemon() {
-        for (int i = 0; i < pokemons.size(); i++) {
-            if (!pokemons.get(i).getAlive()){
-                defeatedPokemons += 1;
-            }
-        }
+    public void setPokemonDefeated(Pokemon poke){
+        this.defeatedPokemons.add(poke);
+        this.pokemons.remove(poke);
     }
 
-    public void setPokemonDefeated(int n){
-        this.defeatedPokemons = n;
-    }
-
-    public int getPokemonDefeated(){
-        return this.defeatedPokemons;
-    }
+//    private void setDefeatedPokemons(int n){
+//        this.defeatedPokemons = n;
+//    }
 
     public String getName() {
         return name;
@@ -130,12 +112,13 @@ public class Player {
         return poke;
     }
 
-    public void recoverBeforeBattle(){
-        for (int i = 0; i < pokemons.size(); i++) {
-            pokemons.set(i, returnPokemon(pokemons.get(i).getName()));
+    public void recoverBeforeBattle() {
+        // Restore health and reset status/stats of all Pokémon
+        for (Pokemon p : pokemons) {
+            p.setHealth(p.getHpMax());
         }
 
-        setPokemonDefeated(0);
+        defeatedPokemons.clear();
     }
 
     @Override

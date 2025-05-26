@@ -22,7 +22,7 @@
         </HBox>
 
         <HBox spacing="20" alignment="CENTER" styleClass="Text__Container">
-            <ComboBox fx:id="PokemonList" prefWidth="200"/>
+            <ComboBox fx:id="pokemonList" prefWidth="200"/>
         </HBox>
 
         <HBox spacing="20" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">

@@ -29,7 +29,7 @@ public class Attack implements Attackable{
         return this.name;
     }
 
-    public int getAttackStrenght (){
+    public int getAttackStrength(){
         return this.attackStrength;
     }
 
