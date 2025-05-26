@@ -20,6 +20,7 @@ public class CombatController {
     ArrayList<Player> players = new ArrayList<>();
     Player player1, player2;
     Pokemon lastUsed;
+    Pokemon p1Pokemon, p2Pokemon;
     private boolean turn = false; //FALSE PARA TURNO 1 TRUE PARA TURNO 2
 
     @FXML private Button passTurn;
@@ -163,4 +164,19 @@ public class CombatController {
         nextTurn();
     }
 
+    @FXML public void useHealingPotion(){
+        player1.personalBag.usePotion(pokemonList.getValue(),"HEALING");
+    }
+
+    @FXML public void useStrengthPotion(){
+        player1.personalBag.usePotion(pokemonList.getValue(),"STRENGTH");
+    }
+
+    @FXML public void useDefPotion(){
+        player1.personalBag.usePotion(pokemonList.getValue(), "DEFENSE");
+    }
+
+    @FXML public void useSpeedPotion(){
+        player1.personalBag.usePotion(pokemonList.getValue(), "SPEED");
+    }
 }
