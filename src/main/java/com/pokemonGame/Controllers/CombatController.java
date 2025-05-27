@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
 import java.io.OutputStream;
@@ -14,35 +15,39 @@ import java.io.PrintStream;
 
 import com.pokemonGame.player.Player;
 
-import java.util.ArrayList;
-
 public class CombatController {
     MainController father;
     ObservableList<Player> players;
     Player player1, player2;
     Pokemon lastUsed;
-    Pokemon p1Pokemon, p2Pokemon;
     private boolean turn = false; //FALSE PARA TURNO 1 TRUE PARA TURNO 2
 
-    @FXML private Button passTurn;
-    @FXML private Button attack;
-    @FXML private Button useHealingPotion;
-    @FXML private Button useStrengthPotion;
-    @FXML private Button useDefPotion;
-    @FXML private Button useSpeedPotion;
-    @FXML private Button forfeit;
-    @FXML private ComboBox<Pokemon> pokemonList;
+    @FXML private Label p1;
+    @FXML private Button p1Attack;
+    @FXML private Button p1useHealingPotion;
+    @FXML private Button p1useStrengthPotion;
+    @FXML private Button p1useDefPotion;
+    @FXML private Button p1useSpeedPotion;
+    @FXML private Button p1Forfeit;
+    @FXML private ComboBox<Pokemon> p1PokemonList;
 
+
+    @FXML private Label p2;
+    @FXML private Button p2Attack;
+    @FXML private Button p2useHealingPotion;
+    @FXML private Button p2useStrengthPotion;
+    @FXML private Button p2useDefPotion;
+    @FXML private Button p2useSpeedPotion;
+    @FXML private Button p2Forfeit;
+    @FXML private ComboBox<Pokemon> p2PokemonList;
+
+    @FXML private Button passTurn;
 
     @FXML private TextArea ConsoleOutput;
 
-    public void setPlayersLists(ArrayList<Player> list){
-        this.players = list;
-    }
-
-    public void setMainController(MainController father){
-        this.father = father;
-    }
+//    public void setMainController(MainController father){
+//        this.father = father;
+//    }
 
     public void initialize() {
         redirectSystemOutputToConsole();
@@ -58,7 +63,7 @@ public class CombatController {
         player1 = players.get(0);
         player2 = players.get(1);
 
-        pokemonList.setItems(FXCollections.observableArrayList(player1.getAllPokemons()));
+        p1PokemonList.setItems(FXCollections.observableArrayList(player1.getAllPokemons()));
 
         player1.recoverBeforeBattle();
         player2.recoverBeforeBattle();
@@ -95,7 +100,8 @@ public class CombatController {
 
     public void setMainController(MainController father){
         this.father = father;
-    @FXML
+    }
+
     public void nextTurn() {
         turn = !turn;
 
@@ -103,11 +109,11 @@ public class CombatController {
         System.out.println("Es el turno de " + currentPlayerName);
 
         Player currentPlayer = turn ? player2 : player1;
-        pokemonList.setItems(FXCollections.observableArrayList(currentPlayer.getAllPokemons()));
-        lastUsed = pokemonList.getValue();
+        p1PokemonList.setItems(FXCollections.observableArrayList(currentPlayer.getAllPokemons()));
+        lastUsed = p1PokemonList.getValue();
 
         if (!currentPlayer.getAllPokemons().isEmpty()) {
-            pokemonList.getSelectionModel().selectFirst();
+            p1PokemonList.getSelectionModel().selectFirst();
         }
 
         checkWinCondition();
@@ -125,12 +131,12 @@ public class CombatController {
 
     private void endBattle(Player winner) {
         passTurn.setDisable(true);
-        attack.setDisable(true);
-        useHealingPotion.setDisable(true);
-        useStrengthPotion.setDisable(true);
-        useDefPotion.setDisable(true);
-        useSpeedPotion.setDisable(true);
-        forfeit.setDisable(true);
+        p1Attack.setDisable(true);
+        p1useHealingPotion.setDisable(true);
+        p1useStrengthPotion.setDisable(true);
+        p1useDefPotion.setDisable(true);
+        p1useSpeedPotion.setDisable(true);
+        p1Forfeit.setDisable(true);
 
         System.out.println("¡" + winner.getName() + " es el ganador del combate!");
 
@@ -146,7 +152,7 @@ public class CombatController {
         Player attacker = turn ? player2 : player1;
         Player defender = turn ? player1 : player2;
 
-        Pokemon attackerPokemon = pokemonList.getValue();
+        Pokemon attackerPokemon = p1PokemonList.getValue();
 
         if (attackerPokemon == null) {
             System.out.println("Selecciona un Pokémon para atacar.");
@@ -173,18 +179,18 @@ public class CombatController {
     }
 
     @FXML public void useHealingPotion(){
-        player1.personalBag.usePotion(pokemonList.getValue(),"HEALING");
+        player1.personalBag.usePotion(p1PokemonList.getValue(),"HEALING");
     }
 
     @FXML public void useStrengthPotion(){
-        player1.personalBag.usePotion(pokemonList.getValue(),"STRENGTH");
+        player1.personalBag.usePotion(p1PokemonList.getValue(),"STRENGTH");
     }
 
     @FXML public void useDefPotion(){
-        player1.personalBag.usePotion(pokemonList.getValue(), "DEFENSE");
+        player1.personalBag.usePotion(p1PokemonList.getValue(), "DEFENSE");
     }
 
     @FXML public void useSpeedPotion(){
-        player1.personalBag.usePotion(pokemonList.getValue(), "SPEED");
+        player1.personalBag.usePotion(p1PokemonList.getValue(), "SPEED");
     }
 }

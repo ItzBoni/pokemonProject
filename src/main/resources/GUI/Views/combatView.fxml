@@ -1,43 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.control.Button?>
-<?import javafx.fxml.FXMLLoader?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.ComboBox?>
-<VBox alignment="CENTER" spacing="10.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
+<VBox alignment="CENTER" spacing="10.0" prefHeight="400.0" prefWidth="600.0"
+      xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.pokemonGame.Controllers.CombatController"
       styleClass="Combat__Page__Container">
 
     <children>
         <Label text="Combate" styleClass="Start__Page__Title"/>
-        <HBox spacing="20" alignment="CENTER" styleClass="Text__Container">
-            <TextArea fx:id="ConsoleOutput" editable="false" wrapText="true" prefHeight="200" styleClass="Console__Output__Area"/>
+
+        <!-- Three vertical sections in an HBox -->
+        <HBox spacing="10" alignment="CENTER" styleClass="Three__Sections__Container">
+
+            <!-- Section 1: Jugador 1 -->
+            <VBox spacing="10" alignment="TOP_CENTER" HBox.hgrow="ALWAYS" styleClass="Start__Page__Buttons__Container">
+                <Label text="Jugador 1" fx:id="p1"/>
+                <Button text="Poción de fuerza" onAction="#useStrengthPotion" fx:id="p1useStrengthPotion" styleClass="Start__Page__Buttons"/>
+                <Button text="Poción de defensa" onAction="#useDefPotion" fx:id="p1useDefPotion" styleClass="Start__Page__Buttons"/>
+                <Button text="Poción de velocidad" onAction="#useSpeedPotion" fx:id="p1useSpeedPotion" styleClass="Start__Page__Buttons"/>
+                <Button text="Poción de curación" onAction="#useHealingPotion" fx:id="p1useHealingPotion" styleClass="Start__Page__Buttons"/>
+                <Button text="Atacar" onAction="#useAttack" fx:id="p1Attack" styleClass="Start__Page__Buttons"/>
+                <ComboBox fx:id="p1PokemonList" prefWidth="150"/>
+            </VBox>
+
+            <VBox spacing="10" alignment="CENTER" HBox.hgrow="ALWAYS" styleClass="Text__Container">
+                <TextArea fx:id="ConsoleOutput" editable="false" wrapText="true" prefHeight="200" prefWidth="200" styleClass="Console__Output__Area"/>
+            </VBox>
+
+            <VBox spacing="10" alignment="TOP_CENTER" HBox.hgrow="ALWAYS" styleClass="Start__Page__Buttons__Container">
+                <Label text="Jugador 2" fx:id="p2"/>
+                <Button text="Poción de fuerza" onAction="#useStrengthPotion" fx:id="p2useStrengthPotion" styleClass="Start__Page__Buttons"/>
+                <Button text="Poción de defensa" onAction="#useDefPotion" fx:id="p2useDefPotion" styleClass="Start__Page__Buttons"/>
+                <Button text="Poción de velocidad" onAction="#useSpeedPotion" fx:id="p2useSpeedPotion" styleClass="Start__Page__Buttons"/>
+                <Button text="Poción de curación" onAction="#useHealingPotion" fx:id="p2useHealingPotion" styleClass="Start__Page__Buttons"/>
+                <Button text="Atacar" onAction="#useAttack" fx:id="p2Attack" styleClass="Start__Page__Buttons"/>
+                <ComboBox fx:id="p2PokemonList" prefWidth="150"/>
+            </VBox>
         </HBox>
 
-        <HBox spacing="20" alignment="CENTER" styleClass="Text__Container">
-            <ComboBox fx:id="pokemonList" prefWidth="200"/>
-        </HBox>
-
-        <HBox spacing="20" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">
-            <Button text="Pasar de turnos" onAction ="#nextTurn" fx:id="passTurn" styleClass="Start__Page__Buttons"/>
-            <Button text="Atacar" onAction ="#useAttack" fx:id="attack" styleClass="Start__Page__Buttons"/>
-            <Button text="Poción de curación" onAction ="#useHealingPotion" fx:id="useHealingPotion" styleClass="Start__Page__Buttons"/>
-        </HBox>
-        <HBox spacing="20" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">
-            <Button text="Poción de fuerza" onAction ="#useStrengthPotion" fx:id="useStrengthPotion" styleClass="Start__Page__Buttons"/>
-            <Button text="Poción de defensa" onAction ="#useDefPotion" fx:id="useDefPotion" styleClass="Start__Page__Buttons"/>
-            <Button text="Poción de velocidad" onAction ="#useSpeedPotion" fx:id="useSpeedPotion" styleClass="Start__Page__Buttons"/>
-        </HBox>
-        <HBox spacing="20" alignment="CENTER"  styleClass="Start__Page__Buttons__Container">
-            <Button text="Rendirse" onAction ="#nextTurn" fx:id="forfeit" styleClass="Start__Page__Buttons"/>
-        </HBox>
+        <VBox spacing="10" alignment="CENTER" styleClass="Start__Page__Buttons__Container">
+            <Button text="Pasar de turnos" onAction="#nextTurn" fx:id="passTurn" styleClass="Start__Page__Buttons"/>
+            <Button text="Rendirse" onAction="#nextTurn" fx:id="p1Forfeit" styleClass="Start__Page__Buttons"/>
+        </VBox>
     </children>
-
 </VBox>

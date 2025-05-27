@@ -7,7 +7,9 @@
     <list default="true" id="4b1eccc6-d96f-4325-9b2b-a5b96f7fbc4a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/CombatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/SelectPlayersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokemonGame/Controllers/SelectPlayersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/GUI/Views/combatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUI/Views/combatView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Views/combatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Views/combatView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
