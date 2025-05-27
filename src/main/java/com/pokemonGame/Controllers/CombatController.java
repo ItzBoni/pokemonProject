@@ -56,12 +56,6 @@ public class CombatController {
 
     @FXML private TextArea ConsoleOutput;
 
-//    public void setMainController(MainController father){
-//        this.father = father;
-//    }
-
-
-
     public void initialize() {
         redirectSystemOutputToConsole();
 
@@ -73,8 +67,18 @@ public class CombatController {
         player2.addPokemon(poke3);
         player2.addPokemon(poke4);
 
+        player1.recoverBeforeBattle();
+        player2.recoverBeforeBattle();
+
         p1PokemonList.setItems(FXCollections.observableArrayList(player1.getAllPokemons()));
         p2PokemonList.setItems(FXCollections.observableArrayList(player2.getAllPokemons()));
+
+        //Para que haya una selección por default y no pete xdlol
+        p1PokemonList.getSelectionModel().selectFirst();
+        p2PokemonList.getSelectionModel().selectFirst();
+
+        System.out.flush();
+        System.out.println("Bienvenidos al combate!!");
     }
 
     public void initCombat() {
@@ -84,10 +88,6 @@ public class CombatController {
             return;
         }
 
-
-
-        player1.recoverBeforeBattle();
-        player2.recoverBeforeBattle();
         nextTurn();
     }
 
@@ -116,7 +116,7 @@ public class CombatController {
 
 
     public void setPlayersLists(ObservableList<Player> list){
-        //this.players = list;
+        this.players = list;
     }
 
     public void setMainController(MainController father){
@@ -178,12 +178,13 @@ public class CombatController {
         Player defender = turn ? player1 : player2;
 
         activePoke1 = p1PokemonList.getValue();
-        activePoke2 = p1PokemonList.getValue();
+        activePoke2 = p2PokemonList.getValue();
 
         Pokemon attackerPokemon = turn ? activePoke2 : activePoke1;
         Pokemon defenderPokemon = turn ? activePoke1 : activePoke2;
 
         if (attackerPokemon == null || !attackerPokemon.getAlive()) {
+            System.out.println(attackerPokemon);
             System.out.println("Tu Pokémon está debilitado. ¡Elige otro!");
             return;
         }
@@ -196,7 +197,9 @@ public class CombatController {
         int dmg = attackerPokemon.getAtaque(); // Aquí podrías alternar entre ataque físico/especial según quieras
         defenderPokemon.recibirAtaque(dmg, Attack.attackType.ESPECIAL);
 
-        System.out.println(attackerPokemon.getName() + " atacó a " + defenderPokemon.getName() + " e hizo " + dmg + " de daño.");
+        System.out.println(attacker.getName() + " manda a " + attackerPokemon.getName() + " al ataque.");
+        System.out.println(attackerPokemon.getName() + " usa un ataque especial contra " + defenderPokemon.getName() + "!");
+        System.out.println("¡Hace " + dmg + " puntos de daño!");
 
         if (!defenderPokemon.getAlive()) {
             System.out.println(defenderPokemon.getName() + " se ha debilitado.");
