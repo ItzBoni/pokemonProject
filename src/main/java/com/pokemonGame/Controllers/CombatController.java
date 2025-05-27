@@ -2,6 +2,11 @@ package com.pokemonGame.Controllers;
 
 import com.pokemonGame.pokemon.Attack;
 import com.pokemonGame.pokemon.Pokemon;
+import com.pokemonGame.player.Player;
+import com.pokemonGame.pokemon.pokedex.Bulbasaur;
+import com.pokemonGame.pokemon.pokedex.Charmander;
+import com.pokemonGame.pokemon.pokedex.Digglet;
+import com.pokemonGame.pokemon.pokedex.Pikachu;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -13,12 +18,16 @@ import javafx.scene.control.TextArea;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
-import com.pokemonGame.player.Player;
-
 public class CombatController {
     MainController father;
     ObservableList<Player> players;
     Player player1, player2;
+    Player draw = new Player("Draw");
+    Pokemon poke1 = new Bulbasaur();
+    Pokemon poke2 = new Pikachu();
+    Pokemon poke3 = new Charmander();
+    Pokemon poke4 = new Digglet();
+
     Pokemon lastUsed;
     private boolean turn = false; //FALSE PARA TURNO 1 TRUE PARA TURNO 2
 
@@ -30,6 +39,7 @@ public class CombatController {
     @FXML private Button p1useSpeedPotion;
     @FXML private Button p1Forfeit;
     @FXML private ComboBox<Pokemon> p1PokemonList;
+    private Pokemon activePoke1;
 
 
     @FXML private Label p2;
@@ -40,6 +50,7 @@ public class CombatController {
     @FXML private Button p2useSpeedPotion;
     @FXML private Button p2Forfeit;
     @FXML private ComboBox<Pokemon> p2PokemonList;
+    private Pokemon activePoke2;
 
     @FXML private Button passTurn;
 
@@ -49,8 +60,21 @@ public class CombatController {
 //        this.father = father;
 //    }
 
+
+
     public void initialize() {
         redirectSystemOutputToConsole();
+
+        //player1 y player2 hardcodeados
+        player1 = new Player("Santi");
+        player1.addPokemon(poke1);
+        player1.addPokemon(poke2);
+        player2 = new Player("Angel");
+        player2.addPokemon(poke3);
+        player2.addPokemon(poke4);
+
+        p1PokemonList.setItems(FXCollections.observableArrayList(player1.getAllPokemons()));
+        p2PokemonList.setItems(FXCollections.observableArrayList(player2.getAllPokemons()));
     }
 
     public void initCombat() {
@@ -60,10 +84,7 @@ public class CombatController {
             return;
         }
 
-        player1 = players.get(0);
-        player2 = players.get(1);
 
-        p1PokemonList.setItems(FXCollections.observableArrayList(player1.getAllPokemons()));
 
         player1.recoverBeforeBattle();
         player2.recoverBeforeBattle();
@@ -95,7 +116,7 @@ public class CombatController {
 
 
     public void setPlayersLists(ObservableList<Player> list){
-        this.players = list;
+        //this.players = list;
     }
 
     public void setMainController(MainController father){
@@ -109,14 +130,18 @@ public class CombatController {
         System.out.println("Es el turno de " + currentPlayerName);
 
         Player currentPlayer = turn ? player2 : player1;
-        p1PokemonList.setItems(FXCollections.observableArrayList(currentPlayer.getAllPokemons()));
-        lastUsed = p1PokemonList.getValue();
 
         if (!currentPlayer.getAllPokemons().isEmpty()) {
             p1PokemonList.getSelectionModel().selectFirst();
         }
 
         checkWinCondition();
+    }
+
+    @FXML
+    public void passTurn(){
+        System.out.println("Turno pasado.");
+        nextTurn();
     }
 
     private void checkWinCondition() {
@@ -152,45 +177,76 @@ public class CombatController {
         Player attacker = turn ? player2 : player1;
         Player defender = turn ? player1 : player2;
 
-        Pokemon attackerPokemon = p1PokemonList.getValue();
+        activePoke1 = p1PokemonList.getValue();
+        activePoke2 = p1PokemonList.getValue();
 
-        if (attackerPokemon == null) {
-            System.out.println("Selecciona un Pokémon para atacar.");
+        Pokemon attackerPokemon = turn ? activePoke2 : activePoke1;
+        Pokemon defenderPokemon = turn ? activePoke1 : activePoke2;
+
+        if (attackerPokemon == null || !attackerPokemon.getAlive()) {
+            System.out.println("Tu Pokémon está debilitado. ¡Elige otro!");
             return;
         }
 
-        Pokemon defenderPokemon = lastUsed;
-
-        if (defenderPokemon == null) {
+        if (defenderPokemon == null || !defenderPokemon.getAlive()) {
             System.out.println("El oponente no tiene un Pokémon activo.");
             return;
         }
 
-        int dmg = attackerPokemon.getAtaque();
-        defenderPokemon.recibirAtaque(dmg, Attack.attackType.ESPECIAL); //Acá la vdd no supe como cambiarle el tipo de ataque dinamicamente -SB
+        int dmg = attackerPokemon.getAtaque(); // Aquí podrías alternar entre ataque físico/especial según quieras
+        defenderPokemon.recibirAtaque(dmg, Attack.attackType.ESPECIAL);
+
         System.out.println(attackerPokemon.getName() + " atacó a " + defenderPokemon.getName() + " e hizo " + dmg + " de daño.");
 
         if (!defenderPokemon.getAlive()) {
             System.out.println(defenderPokemon.getName() + " se ha debilitado.");
             defender.setPokemonDefeated(defenderPokemon);
+
+            // Auto-select next Pokémon if available
+            Pokemon nextPoke = defender.getNextAlivePokemon();
+            if (turn) {
+                activePoke1 = nextPoke;
+                p1PokemonList.getSelectionModel().select(nextPoke);
+            } else {
+                activePoke2 = nextPoke;
+                p2PokemonList.getSelectionModel().select(nextPoke);
+            }
         }
 
+        checkWinCondition();
         nextTurn();
     }
 
+
     @FXML public void useHealingPotion(){
-        player1.personalBag.usePotion(p1PokemonList.getValue(),"HEALING");
+        if (!turn)
+            player1.personalBag.usePotion(p1PokemonList.getValue(),"HEALING");
+        else
+            player2.personalBag.usePotion(p2PokemonList.getValue(),"HEALING");
     }
 
     @FXML public void useStrengthPotion(){
-        player1.personalBag.usePotion(p1PokemonList.getValue(),"STRENGTH");
+        if (!turn)
+            player1.personalBag.usePotion(p1PokemonList.getValue(),"STRENGTH");
+        else
+            player2.personalBag.usePotion(p2PokemonList.getValue(),"STRENGTH");
     }
 
     @FXML public void useDefPotion(){
-        player1.personalBag.usePotion(p1PokemonList.getValue(), "DEFENSE");
+        if (!turn)
+            player1.personalBag.usePotion(p1PokemonList.getValue(),"DEFENSE");
+        else
+            player2.personalBag.usePotion(p2PokemonList.getValue(),"DEFENSE");
     }
 
     @FXML public void useSpeedPotion(){
-        player1.personalBag.usePotion(p1PokemonList.getValue(), "SPEED");
+        if (!turn)
+            player1.personalBag.usePotion(p1PokemonList.getValue(),"DEFENSE");
+        else
+            player2.personalBag.usePotion(p2PokemonList.getValue(),"DEFENSE");
+    }
+
+    @FXML public void forfeit(){
+        endBattle(draw);
     }
 }

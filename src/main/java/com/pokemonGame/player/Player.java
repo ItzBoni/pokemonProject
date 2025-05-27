@@ -29,7 +29,6 @@ public class Player {
     public List<Pokemon> getAllPokemons(){
         return this.pokemons;
     }
-
     public void addPokemon(Pokemon p) {
         pokemons.add(p);
     }
@@ -38,6 +37,13 @@ public class Player {
         for(Pokemon p: pokemons){
             p.setHealth(p.getHpMax());
         }
+    }
+
+    public Pokemon getNextAlivePokemon() {
+        for (Pokemon p : getAllPokemons()) {
+            if (p.getAlive()) return p;
+        }
+        return null;
     }
 
     public void setPokemonDefeated(Pokemon poke){

@@ -26,12 +26,10 @@
                 <ComboBox fx:id="p1PokemonList" prefWidth="150"/>
             </VBox>
 
-            <!-- Section 2: Console Output -->
             <VBox spacing="10" alignment="CENTER" HBox.hgrow="ALWAYS" styleClass="Text__Container">
                 <TextArea fx:id="ConsoleOutput" editable="false" wrapText="true" prefHeight="200" prefWidth="200" styleClass="Console__Output__Area"/>
             </VBox>
 
-            <!-- Section 3: Jugador 2 -->
             <VBox spacing="10" alignment="TOP_CENTER" HBox.hgrow="ALWAYS" styleClass="Start__Page__Buttons__Container">
                 <Label text="Jugador 2" fx:id="p2"/>
                 <Button text="Poción de fuerza" onAction="#useStrengthPotion" fx:id="p2useStrengthPotion" styleClass="Start__Page__Buttons"/>
@@ -43,10 +41,9 @@
             </VBox>
         </HBox>
 
-        <!-- Final row of action buttons -->
         <VBox spacing="10" alignment="CENTER" styleClass="Start__Page__Buttons__Container">
-            <Button text="Pasar de turnos" onAction="#nextTurn" fx:id="passTurn" styleClass="Start__Page__Buttons"/>
-            <Button text="Rendirse" onAction="#nextTurn" fx:id="p1Forfeit" styleClass="Start__Page__Buttons"/>
+            <Button text="Pasar de turnos" onAction="#passTurn" fx:id="passTurn" styleClass="Start__Page__Buttons"/>
+            <Button text="Rendirse" onAction="#forfeit" fx:id="p1Forfeit" styleClass="Start__Page__Buttons"/>
         </VBox>
     </children>
 </VBox>

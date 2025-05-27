@@ -6,7 +6,7 @@ public class TablaTipos{
 
     private static Map<Pokemon.tipo, Map<Pokemon.tipo, Double>> tablaTipos; // Declaración como variable de instancia
 
-    TablaTipos(){// Mapa principal: tipo atacante → (tipo defensor → efectividad)
+    public TablaTipos(){// Mapa principal: tipo atacante → (tipo defensor → efectividad)
         tablaTipos = new HashMap<>();
 
         // --- Tipo Fuego ---

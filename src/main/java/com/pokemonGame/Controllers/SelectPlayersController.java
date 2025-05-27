@@ -122,6 +122,7 @@ public class SelectPlayersController {
         showWarningAlert("Redireccionando al combate.");
         if(numPlayers.intValue()==2){
             father.navigateToView(3);
+
         }else{
             father.navigateToView(5);
         }
