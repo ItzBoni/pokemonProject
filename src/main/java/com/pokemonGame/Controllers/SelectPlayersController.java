@@ -123,6 +123,8 @@ public class SelectPlayersController {
         if(numPlayers.intValue()==2){
             father.navigateToView(0);
         }else{
+            father.recoverPlayers();
+            father.updateComboBoxesCombat();
             father.navigateToView(5);
         }
     }

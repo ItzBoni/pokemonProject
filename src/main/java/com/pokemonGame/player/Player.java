@@ -9,12 +9,15 @@ import com.pokemonGame.pokemon.pokedex.Pikachu;
 import com.pokemonGame.pokemon.pokedex.Squirtle;
 import  com.pokemonGame.potions.Potion;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
     private String name;
-    private List<Pokemon> pokemons = new ArrayList<>();
+    private ObservableList<Pokemon> pokemons = FXCollections.observableArrayList();
     private int defeatedPokemons = 0;
     public Bag personalBag = new Bag();
 
@@ -39,6 +42,10 @@ public class Player {
                 defeatedPokemons += 1;
             }
         }
+    }
+
+    public ObservableList<Pokemon> getPokemonList(){
+        return this.pokemons;
     }
 
     public void setPokemonDefeated(int n){

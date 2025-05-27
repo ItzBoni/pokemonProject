@@ -46,7 +46,7 @@
                         <Label text="Select pokemon:"  styleClass="CombatAll__Page__Row__Label"/>
                     </VBox>
                     <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
-                        <ComboBox  fx:id="SelectObjecctive_P_1" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
+                        <ComboBox  fx:id="SelectObjective_P_1" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
                         <ComboBox  fx:id="selectPokemon_P_1" promptText ="Elige un pokemon" styleClass="CombatAll__Pokemon__Select"/>
                     </VBox>
                     
@@ -58,7 +58,7 @@
                     </VBox>
 
                     <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
-                        <ComboBox  fx:id="SelectObjecctive_P_2" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
+                        <ComboBox  fx:id="SelectObjective_P_2" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
                         <ComboBox  fx:id="selectPokemon_P_2" promptText ="Elige un pokemon" styleClass="CombatAll__Pokemon__Select"/>
                     </VBox>
                     
@@ -104,7 +104,7 @@
                         <Label text="Select pokemon:"  styleClass="CombatAll__Page__Row__Label"/>
                     </VBox>
                     <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
-                        <ComboBox  fx:id="SelectObjecctive_P_3" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
+                        <ComboBox  fx:id="SelectObjective_P_3" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
                         <ComboBox  fx:id="selectPokemon_P_3" promptText ="Elige un pokemon" styleClass="CombatAll__Pokemon__Select"/>
                     </VBox>
                     
@@ -116,7 +116,7 @@
                     </VBox>
                     
                     <VBox spacing="10" alignment="CENTER" styleClass="CombatAll__Page__Row__SubContainer">
-                        <ComboBox  fx:id="SelectObjecctive_P_4" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
+                        <ComboBox  fx:id="SelectObjective_P_4" promptText ="Elige un objetivo" styleClass="CombatAll__Player__Select"/>
                         <ComboBox  fx:id="selectPokemon_P_4" promptText ="Elige un pokemon" styleClass="CombatAll__Pokemon__Select"/>
                     </VBox>
                     
@@ -136,8 +136,8 @@
             <HBox styleClass="CombatAll__Page__Row__Divisor"></HBox>
 
             <HBox spacing="50" alignment="CENTER" styleClass="CombatAll__Page__Row__Container">
-                <Button text="Continue the turn" />
-                <Button text="End battle" />
+                <Button text="Continue the turn" onAction="#takeTurn" />
+                <Button text="End battle" onAction="#exitCombat"/>
             </HBox>
       </children>
 

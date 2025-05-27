@@ -7,7 +7,7 @@ public abstract class Pokemon implements Evolvable {
     protected String name;
     protected int level;
     protected int health;
-    protected boolean alive;
+    protected boolean alive = true;
     protected int evolution;
     protected tipo tipoPrimario;
     protected tipo tipoSecundario; // Puede ser normal si solo tiene un tipo

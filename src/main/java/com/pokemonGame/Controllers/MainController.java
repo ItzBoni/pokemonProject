@@ -16,6 +16,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import java.util.HashMap;
 
 import com.pokemonGame.player.Player;
+import com.pokemonGame.pokemon.Pokemon;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,6 +31,8 @@ public class MainController{
     IntegerProperty numberOfPlayers = new SimpleIntegerProperty(0);
     ArrayList<ComboBox<Player>> comboBoxesFromSelct =  new ArrayList<>();
     ArrayList<Label> labelFromSelect =  new ArrayList<>();
+    ArrayList<ComboBox<Pokemon>> comboBoxesFromCombat = new ArrayList<>();
+    ArrayList<Label> labelFromCombat = new ArrayList<>();
 
     @FXML
     private StackPane contentArea;
@@ -79,12 +82,11 @@ public class MainController{
         loader = new FXMLLoader(getClass().getResource("/GUI/Views/CombatFour.fxml"));
         views.put(5, loader.load());
 
-        // CombatAllController combatAllController = loader.getController();
-        // combatAllController.setPlayersForCombat(playersForCombat);
-        // combatAllController.setMainController(this);
-        // combatAllController.updateComboBoxesSelect(comboBoxesFromSelct);
-        // combatAllController.updateLabelSelect(labelFromSelect);
-        // combatAllController.setNumPlayers(numberOfPlayers);
+        CombatAllController combatAllController = loader.getController();
+        combatAllController.setPlayersForCombat(playersForCombat);
+        combatAllController.setMainController(this);
+        combatAllController.setPokemonsForCombat(comboBoxesFromCombat);
+        combatAllController.setLabelsForCombat(labelFromCombat);
 
         addAllNodesToRoot();
         navigateToView(0);
@@ -118,6 +120,24 @@ public class MainController{
     public void enableButtonsOfPlayers(){
         for (Button b: buttonNeedPlayers){
             b.setDisable(false);
+        }
+    }
+
+    public void updateComboBoxesCombat(){
+        this.comboBoxesFromCombat.get(0).setItems(playersForCombat.get(0).getPokemonList());
+        this.comboBoxesFromCombat.get(1).setItems(playersForCombat.get(1).getPokemonList());
+        this.comboBoxesFromCombat.get(2).setItems(playersForCombat.get(2).getPokemonList());
+        this.comboBoxesFromCombat.get(3).setItems(playersForCombat.get(3).getPokemonList());
+
+        this.labelFromCombat.get(0).setText("Player: "+playersForCombat.get(0).getName());
+        this.labelFromCombat.get(1).setText("Player: "+playersForCombat.get(1).getName());
+        this.labelFromCombat.get(2).setText("Player: "+playersForCombat.get(2).getName());
+        this.labelFromCombat.get(3).setText("Player: "+playersForCombat.get(3).getName());
+    }
+
+    public void recoverPlayers(){
+        for(Player p : playersForCombat){
+            p.recoverBeforeBattle();
         }
     }
 
