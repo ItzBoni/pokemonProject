@@ -19,7 +19,9 @@ public class MainApp extends Application {
         scene.getStylesheets().add(getClass().getResource("/Stylesheets/InitialView.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource("/Stylesheets/PlayerRegister.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource("/Stylesheets/CombatView.css").toExternalForm());        
-        scene.getStylesheets().add(getClass().getResource("/Stylesheets/MainMenu.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/Stylesheets/MainMenu.css").toExternalForm());      
+        scene.getStylesheets().add(getClass().getResource("/Stylesheets/SelectPlayers.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/Stylesheets/CombatFour.css").toExternalForm());
         primaryStage.setTitle("Pokemon Game by ADS");
         primaryStage.setScene(scene);
         primaryStage.show();

@@ -1,10 +1,17 @@
 package com.pokemonGame.Controllers;
 
+import javafx.collections.ObservableList;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.StackPane;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ComboBox;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+
 
 import java.util.HashMap;
 
@@ -16,13 +23,16 @@ import java.util.ArrayList;
 public class MainController{
     
     HashMap <Integer, Node> views = new HashMap<>();
-    ArrayList<Player> players = new ArrayList<>();
+    ObservableList<Player> players = FXCollections.observableArrayList();
+    ObservableList<Player> playersForCombat = FXCollections.observableArrayList();
     ArrayList<Button> buttonNeedPlayers = new ArrayList<>();
+
+    IntegerProperty numberOfPlayers = new SimpleIntegerProperty(0);
+    ArrayList<ComboBox<Player>> comboBoxesFromSelct =  new ArrayList<>();
+    ArrayList<Label> labelFromSelect =  new ArrayList<>();
 
     @FXML
     private StackPane contentArea;
-
-    // @FXML private Node view2;
 
     @FXML public void initialize() throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/Views/InitView.fxml"));
@@ -56,6 +66,28 @@ public class MainController{
         combat.setMainController(this);
         mainMenuController.setCombat(combat);
 
+        loader = new FXMLLoader(getClass().getResource("/GUI/Views/SelectPlayers.fxml"));
+        views.put(4, loader.load());
+
+        SelectPlayersController selectPlayersController = loader.getController();
+        selectPlayersController.setPlayersList(players);
+        selectPlayersController.setPlayersForCombat(playersForCombat);
+        selectPlayersController.setMainController(this);
+        selectPlayersController.updateComboBoxesSelect(comboBoxesFromSelct);
+        selectPlayersController.updateLabelSelect(labelFromSelect);
+        selectPlayersController.setNumPlayers(numberOfPlayers);
+        
+
+        loader = new FXMLLoader(getClass().getResource("/GUI/Views/CombatFour.fxml"));
+        views.put(5, loader.load());
+
+        // CombatAllController combatAllController = loader.getController();
+        // combatAllController.setPlayersForCombat(playersForCombat);
+        // combatAllController.setMainController(this);
+        // combatAllController.updateComboBoxesSelect(comboBoxesFromSelct);
+        // combatAllController.updateLabelSelect(labelFromSelect);
+        // combatAllController.setNumPlayers(numberOfPlayers);
+
         addAllNodesToRoot();
         navigateToView(0);
     }
@@ -88,6 +120,24 @@ public class MainController{
     public void enableButtonsOfPlayers(){
         for (Button b: buttonNeedPlayers){
             b.setDisable(false);
+        }
+    }
+
+    public void setNumPlayers(int n){
+        numberOfPlayers.set(n);
+
+        for(int i = 0; i < comboBoxesFromSelct.size(); i++){
+            if(numberOfPlayers.intValue()>i){
+                comboBoxesFromSelct.get(i).setVisible(true);
+                comboBoxesFromSelct.get(i).setManaged(true);
+                labelFromSelect.get(i).setVisible(true);
+                labelFromSelect.get(i).setManaged(true);
+            } else{
+                comboBoxesFromSelct.get(i).setVisible(false);
+                comboBoxesFromSelct.get(i).setManaged(false);
+                labelFromSelect.get(i).setVisible(false);
+                labelFromSelect.get(i).setManaged(false);
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ package com.pokemonGame.Controllers;
 import com.pokemonGame.pokemon.Attack;
 import com.pokemonGame.pokemon.Pokemon;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 
 public class CombatController {
     MainController father;
-    ArrayList<Player> players = new ArrayList<>();
+    ObservableList<Player> players;
     Player player1, player2;
     Pokemon lastUsed;
     Pokemon p1Pokemon, p2Pokemon;
@@ -87,6 +88,13 @@ public class CombatController {
         System.setErr(ps);
     }
 
+
+    public void setPlayersLists(ObservableList<Player> list){
+        this.players = list;
+    }
+
+    public void setMainController(MainController father){
+        this.father = father;
     @FXML
     public void nextTurn() {
         turn = !turn;

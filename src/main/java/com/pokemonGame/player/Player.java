@@ -123,7 +123,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return name + " owns " + pokemons.size() + " Pokémon.";
+        return name;
     }
 }
 

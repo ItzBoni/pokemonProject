@@ -29,9 +29,12 @@ public class MainMenuController {
     @FXML public void goToStart(){
         father.navigateToView(0);
     }
-    @FXML public void goToBattle(){
-
-        father.navigateToView(3);
-        combat.initCombat();
+    @FXML public void goToIndividualBattle(){
+        father.setNumPlayers(2);
+        father.navigateToView(4);
+    }
+    @FXML public void goToAllBattle(){
+        father.setNumPlayers(4);
+        father.navigateToView(4);
     }
 }

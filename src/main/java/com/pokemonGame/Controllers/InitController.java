@@ -1,5 +1,7 @@
 package com.pokemonGame.Controllers;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 import com.pokemonGame.player.Player;
 
 public class InitController {
-    ArrayList<Player> players = new ArrayList<>();
+    ObservableList<Player> players = FXCollections.observableArrayList();
     MainController father;
 
     @FXML private Button StartGameButton;
@@ -20,7 +22,7 @@ public class InitController {
         }
     }
 
-    public void setPlayersLists(ArrayList<Player> list){
+    public void setPlayersLists(ObservableList<Player> list){
         this.players = list;
     }
 
